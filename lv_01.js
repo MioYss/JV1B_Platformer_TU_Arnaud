@@ -1,4 +1,4 @@
-//import Player from "./player.js";
+import Player from "./player.js";
 
 export default class lv_01 extends Phaser.Scene {
     constructor() {
@@ -17,7 +17,7 @@ export default class lv_01 extends Phaser.Scene {
     this.load.tilemapTiledJSON("lv_01", "level/lv_01.json");
 
     this.load.spritesheet('perso','assets/perso.png',
-        { frameWidth: 256, frameHeight: 256 })
+        { frameWidth: 32, frameHeight: 48 });
         ;
 
     }
@@ -50,6 +50,7 @@ export default class lv_01 extends Phaser.Scene {
     
         
         //CREATION JOUEUR ET PROPRIETES
+        this.player = new Player(this, 50,50, 'perso');
 
         //Initialisation de la caméra et des limites de jeu
         this.cameras.main.setBounds(0, 0, 2048, 3584);
@@ -61,9 +62,11 @@ export default class lv_01 extends Phaser.Scene {
 
         //COLLIDER JOUEURS AVEC MAP
         this.physics.add.collider(this.player, mur);
+        this.physics.add.collider(this.player, sol);
 
         //Collisions avec tileset
         mur.setCollisionByExclusion(-1, true);
+        sol.setCollisionByExclusion(-1, true);
 
         /*sortie_layer.setCollisionByExclusion(-1, true);
         this.physics.add.collider(this.player, sortie_layer, () => {
@@ -83,7 +86,8 @@ export default class lv_01 extends Phaser.Scene {
 
 
     update() {
-
+        
+        this.player.deplacement ();
 
     }
 
