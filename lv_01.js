@@ -27,9 +27,6 @@ export default class lv_01 extends Phaser.Scene {
 
         //this.scene.start('salle_01', { hp: 3 })
 
-        keyE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E);
-        keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
-
         console.log(this)
         // chargement de la carte
         const map = this.add.tilemap("lv_01");
@@ -87,18 +84,7 @@ export default class lv_01 extends Phaser.Scene {
 
     update() {
 
-        this.player.deplacement ();
 
-        if (keyE.isDown) {
-
-            console.log ("test E");
-        }
-
-        if (keyA.isDown) {
-
-            console.log ("test A");
-
-        }
     }
 
 };
