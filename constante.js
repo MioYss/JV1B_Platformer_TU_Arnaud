@@ -1,1 +1,1 @@
-const GRAVITY_GAME = 1000
+const GRAVITY_GAME = 750

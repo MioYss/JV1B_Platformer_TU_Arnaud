@@ -3,13 +3,25 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "lv_01.tmx",
     "expandedProjectPaths": [
+        "."
     ],
     "fileStates": {
         "": {
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "lv_01.tmx": {
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 552,
+                "y": 300.5
+            }
+        },
+        "lv_01.tmx#tile_set": {
+            "scaleInDock": 1
         },
         "tile_set.tsx": {
             "scaleInDock": 1
@@ -21,10 +33,12 @@
     "map.lastUsedExportFilter": "Tous les Fichiers (*)",
     "map.lastUsedFormat": "tmx",
     "openFiles": [
+        "lv_01.tmx"
     ],
     "project": "lv_01.tiled-project",
     "property.type": "bool",
     "recentFiles": [
+        "lv_01.tmx"
     ],
     "tileset.embedInMap": true
 }
