@@ -1,0 +1,1 @@
+CONST = gravity_game = 300

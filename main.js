@@ -1,3 +1,4 @@
+import lv_01 from "./lv_01.js";
 import menu from "./menu.js";
 
 
@@ -7,11 +8,11 @@ var config = {
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 0 },
+            gravity: { y: gravity_game },
             debug: true
         }
     },
 
-    scene: [menu,manoir,entre_manoir,salle_01]
+    scene: [menu,lv_01]
 };
 var game = new Phaser.Game(config);
