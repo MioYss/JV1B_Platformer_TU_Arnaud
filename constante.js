@@ -1,1 +1,1 @@
-CONST = gravity_game = 300
+const GRAVITY_GAME = 300
