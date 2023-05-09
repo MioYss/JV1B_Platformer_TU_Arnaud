@@ -1,8 +1,4 @@
-import entre_manoir from "./entre_manoir.js";
 import menu from "./menu.js";
-import manoir from "./manoir.js";
-import salle_01 from "./salle_01.js";
-
 
 
 var config = {
