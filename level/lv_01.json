@@ -3,6 +3,29 @@
  "infinite":false,
  "layers":[
         {
+         "draworder":"topdown",
+         "id":3,
+         "name":"ennemis",
+         "objects":[
+                {
+                 "class":"",
+                 "height":0,
+                 "id":1,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":512.7157741034,
+                 "y":519.422090824406
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -64,8 +87,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":3,
- "nextobjectid":1,
+ "nextlayerid":4,
+ "nextobjectid":2,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",

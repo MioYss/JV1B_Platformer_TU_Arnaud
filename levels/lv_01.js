@@ -1,4 +1,5 @@
 import Player from "../entities/player.js";
+import Mobs from "../entities/mobs.js";
 
 export default class lv_01 extends Phaser.Scene {
     constructor() {
@@ -20,7 +21,11 @@ export default class lv_01 extends Phaser.Scene {
         { frameWidth: 32, frameHeight: 48 });
         ;
 
+    this.load.image("snake", "assets/snake.png"); //Sprite mob
+
     }
+
+    
 
 
     create() {
@@ -64,6 +69,9 @@ export default class lv_01 extends Phaser.Scene {
         this.physics.add.collider(this.player, mur);
         this.physics.add.collider(this.player, sol);
 
+        //collider mobs
+
+
         //Collisions avec tileset
         mur.setCollisionByExclusion(-1, true);
         sol.setCollisionByExclusion(-1, true);
@@ -77,18 +85,33 @@ export default class lv_01 extends Phaser.Scene {
                 y : 3500,
             });
         }); */
+
+
+        // Creation groupes
+        this.groupe_ennemis = this.physics.add.group();
+
+
+        console.log(map)
+
+        //Creation des ennemis à partir du layer objet dans Tiled
+        map.getObjectLayer('ennemis').objects.forEach((objet) => {
+
+            this.groupe_ennemis.create(objet.x, objet.y, 'snake'); 
+
+            this.physics.add.collider(this.groupe_ennemis,sol);
+            this.physics.add.collider(this.groupe_ennemis,mur);
+        });
+
+        this.physics.add.collider(this.player, this.groupe_ennemis, this.player.recoit_degats);
+        //this.groupe_ennemis.body.setImmovable(true);
+
     }
-
-
-    
-    
-
 
 
     update() {
         
         this.player.deplacement ();
-
+        //this.ennemis.updateMob();
     }
 
 };

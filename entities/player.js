@@ -13,9 +13,12 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         this.direction = 'left';
 
-        // declaration variable  et fonction pour wall jump
+        // declaration variable
         this.wall_jump = true;
-        this.offTouche = true
+        this.offTouche = true;
+
+        this.invulnerable = false;
+
 
 
     }
@@ -74,6 +77,31 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
                 this.setVelocityX(50);
                             
             }
+        }
+    }
+
+    recoit_degats(player, ennemi){
+
+        if(player.invulnerable == false){
+            player.invulnerable = true;
+
+            player.hp -= 1;
+            
+            if(player.hp <= 0) {
+                player.scene.scene.start("menu");
+            }
+
+
+            player.setTint(0xff0000);  // met le player rouge
+            player.scene.cameras.main.shake(200, 0.01); // shake de cam
+            console.log(player.hp); 
+
+            setTimeout(() => {
+                player.invulnerable = false;
+                player.setTint(0xffffff); // met le player normal
+    
+            }, player.duree_invulnerable);
+            
         }
     }
 }
