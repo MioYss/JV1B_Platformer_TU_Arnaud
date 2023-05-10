@@ -1,5 +1,5 @@
-import lv_01 from "./lv_01.js";
-import menu from "./menu.js";
+import lv_01 from "./levels/lv_01.js";
+import menu from "/levels/menu.js";
 
 
 var config = {
