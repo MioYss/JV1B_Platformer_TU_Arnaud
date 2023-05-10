@@ -5,6 +5,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         super(scene, x, y, texture);
         this.keyboard = scene.input.keyboard.createCursorKeys(); // up, down, right, left, space, shift
         this.keyE = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E); // ajout E
+        this.keySPACE = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE); // ajout space
 
         scene.physics.world.enable(this)
         scene.add.existing(this)
@@ -12,9 +13,20 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         this.direction = 'left';
 
+        // declaration variable  et fonction pour wall jump
+        this.wall_jump = true;
+        this.offTouche = true
+
+
     }
 
+    blocage_touche () {
+        offTouche = false
+    }
 
+    cd_wall_jump () {
+        wall_jump = true
+    }
 
     deplacement() {
         if (this.keyboard.left.isDown) { //si la touche gauche est appuyée
@@ -37,5 +49,31 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
             this.direction = "down"
         }
         console.log(this.direction)
+
+
+         // Creation  du Wall Jump 
+        if (this.keyboard.up.isDown && this.body.blocked.right || this.keySPACE.isDown && this.body.blocked.right) {
+        if (this.wall_jump == true) {
+            this.wall_jump = false;
+            this.offTouche = true;
+            setTimeout(this.wall_jump = true, 500);
+            setTimeout(this.offTouche = false, 200);
+            this.setVelocityY(-p_deplacementY);
+            this.setVelocityX(-50);
+                            
+            }
+        }
+    
+        if (this.keyboard.up.isDown && this.body.blocked.left || this.keySPACE.isDown && this.body.blocked.left) {
+            if (this.wall_jump == true) {
+                this.wall_jump = false;
+                this.offTouche = true;
+                setTimeout(this.wall_jump = true, 500);
+                setTimeout(this.offTouche = false, 200);
+                this.setVelocityY(-p_deplacementY);
+                this.setVelocityX(50);
+                            
+            }
+        }
     }
 }
