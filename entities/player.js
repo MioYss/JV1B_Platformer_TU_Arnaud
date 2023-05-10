@@ -18,6 +18,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.offTouche = true;
 
         this.invulnerable = false;
+        this.hp = 1
 
 
 
@@ -35,6 +36,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         if (this.keyboard.left.isDown) { //si la touche gauche est appuyée
             this.setVelocityX(-300); //alors vitesse négative en X
             this.direction = "left"
+            console.log(hp)
 
         }
 
@@ -100,7 +102,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
                 player.invulnerable = false;
                 player.setTint(0xffffff); // met le player normal
     
-            }, player.duree_invulnerable);
+            }, player.DUREE_INVULNERABLE);
             
         }
     }
