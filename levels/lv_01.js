@@ -22,6 +22,8 @@ export default class lv_01 extends Phaser.Scene {
 
     this.load.image("snake", "assets/snake.png"); //Sprite mob
 
+    this.load.image("sprite_tir", "assets/projectile.png"); //Sprite tir
+
     }
 
     
@@ -68,9 +70,6 @@ export default class lv_01 extends Phaser.Scene {
         this.physics.add.collider(this.player, mur);
         this.physics.add.collider(this.player, sol);
 
-        //collider mobs
-
-
         //Collisions avec tileset
         mur.setCollisionByExclusion(-1, true);
         sol.setCollisionByExclusion(-1, true);
@@ -89,6 +88,7 @@ export default class lv_01 extends Phaser.Scene {
         // Creation groupes
         this.groupe_ennemis = this.physics.add.group();
 
+        this.groupe_bullets = this.physics.add.group();
 
         console.log(map)
 
@@ -96,7 +96,7 @@ export default class lv_01 extends Phaser.Scene {
         map.getObjectLayer('ennemis').objects.forEach((objet) => {
 
             this.groupe_ennemis.create(objet.x, objet.y, 'snake'); 
-
+            this.groupe_ennemis = new Mobs (this,objet.x, objet.y, "snake")
             this.physics.add.collider(this.groupe_ennemis,sol);
             this.physics.add.collider(this.groupe_ennemis,mur);
         });
@@ -111,7 +111,11 @@ export default class lv_01 extends Phaser.Scene {
         
         this.player.deplacement ();
         //this.ennemis.updateMob();
+        this.groupe_ennemis.updateMob();
 
+        this.groupe_ennemis.attaque(this, this.sprite_tir);
+
+        console.log (this.groupe_ennemis.time_from_last_shot)
     }
 
 };

@@ -1,3 +1,5 @@
+import Tir from "./tir.js";
+
 
 export default class Mobs extends Phaser.Physics.Arcade.Sprite {
 
@@ -9,17 +11,33 @@ export default class Mobs extends Phaser.Physics.Arcade.Sprite {
         this.setCollideWorldBounds(true);
 
         this.updateMob();
-
+        this.time_from_last_shot = 0; 
+        this.fire_cooldown = 1000; 
+        
     }
 
 
     updateMob() {
 
+        this.direction = "left"
         //this.scene.physics.add.collider(this.scene.player, this, this.scene.player.recoit_degats);
 
     }
 
+    attaque(scene,sprite) {   
 
+
+        //timer cree par phaser - valaeur donner et on regarde la différence
+        if(new Date().getTime() - this.time_from_last_shot < this.fire_cooldown){
+             return; 
+        } 
+
+        else {
+            this.tir = new Tir (scene, this.x, this.y, sprite);
+            this.tir.tirer(this.direction);
+            this.time_from_last_shot = new Date().getTime(); // on donne une nouvelle valauer a timefrom, on l'actualise pour avoir un delai
+        }
+    }
     
 
 }

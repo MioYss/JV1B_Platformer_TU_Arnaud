@@ -4,5 +4,4 @@ const GRAVITY_GAME = 1000
 
 const p_deplacementY = 210
 
-// Var player
 
