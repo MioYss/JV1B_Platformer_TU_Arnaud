@@ -86,13 +86,19 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
     recoit_degats(player, ennemi){
 
-        if(player.invulnerable == false){
+        player.hp -= 1;
+            
+        if(player.hp <= 0) {
+            player.mort_player()
+        }
+        /*if(player.invulnerable == false){
             player.invulnerable = true;
             console.log(player.invulnerable)
-            player.hp -= 0;
+            player.hp -= 1;
             
             if(player.hp <= 0) {
-                player.scene.scene.start("menu");
+                //player.scene.scene.start("menu");
+                this.mort_player()
             }
 
 
@@ -106,7 +112,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     
             }, player.duree_invulnerable);
             
-        }
+        }*/
     }
 
     annihilation(mur, bullet){
@@ -114,5 +120,10 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         // destruction tir quand touche mur
         mur.destroy();
 
+    }
+
+    mort_player(){
+
+        this.scene.scene.restart()
     }
 }

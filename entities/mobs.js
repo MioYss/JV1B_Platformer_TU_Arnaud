@@ -45,7 +45,13 @@ export default class Mobs extends Phaser.Physics.Arcade.Sprite {
 
         player.hp -= 1; 
         if(player.hp <= 0) {
-            player.scene.scene.start("menu");
+            //player.scene.scene.start("menu");
+            this.mort_player()
         }
+    }
+
+    mort_player(){
+
+        this.scene.scene.restart()
     }
 }
