@@ -34,6 +34,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     }
 
     deplacement() {
+        if(!this.body) return;
+
         if (this.keyboard.left.isDown) { //si la touche gauche est appuyée
             this.setVelocityX(-300); //alors vitesse négative en X
             this.direction = "left"
@@ -113,5 +115,4 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         mur.destroy();
 
     }
-    
 }

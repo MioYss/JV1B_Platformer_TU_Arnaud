@@ -97,22 +97,28 @@ export default class lv_01 extends Phaser.Scene {
 
             this.groupe_ennemis.create(objet.x, objet.y, 'snake'); 
             this.groupe_ennemis = new Mobs (this,objet.x, objet.y, "snake")
+            
             this.physics.add.collider(this.groupe_ennemis,sol);
             this.physics.add.collider(this.groupe_ennemis,mur);
         });
+        
+        this.groupe_ennemis.body.setImmovable(true);
 
         this.physics.add.collider(this.player, this.groupe_ennemis, this.player.recoit_degats);
 
-        this.groupe_ennemis.body.setImmovable(true);
-
         this.physics.add.collider(mur, this.groupe_bullets, this.player.annihilation);
+
+        this.physics.add.collider(this.player, this.groupe_bullets, (player, bullet) => {
+            this.groupe_ennemis.inflige_degats(player, bullet);
+        });
 
     }
 
 
     update() {
         
-        this.player.deplacement ();
+        console.log(this.player);
+        this.player.deplacement();
         //this.ennemis.updateMob();
         this.groupe_ennemis.updateMob();
 
