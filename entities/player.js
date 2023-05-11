@@ -106,4 +106,12 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
             
         }
     }
+
+    annihilation(mur, bullet){
+
+        // destruction tir quand touche mur
+        mur.destroy();
+
+    }
+    
 }

@@ -102,7 +102,10 @@ export default class lv_01 extends Phaser.Scene {
         });
 
         this.physics.add.collider(this.player, this.groupe_ennemis, this.player.recoit_degats);
-        //this.groupe_ennemis.body.setImmovable(true);
+
+        this.groupe_ennemis.body.setImmovable(true);
+
+        this.physics.add.collider(mur, this.groupe_bullets, this.player.annihilation);
 
     }
 

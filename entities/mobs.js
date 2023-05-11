@@ -39,5 +39,15 @@ export default class Mobs extends Phaser.Physics.Arcade.Sprite {
         }
     }
     
+    inflige_degats(ennemi, bullet){
+
+        bullet.destroy();
+
+        ennemi.hp -= 1; 
+        if(ennemi.hp <= 0){
+
+            ennemi.destroy(); 
+        }
+    }
 
 }
