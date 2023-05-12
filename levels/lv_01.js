@@ -101,15 +101,18 @@ export default class lv_01 extends Phaser.Scene {
 
         //Creation des ennemis à partir du layer objet dans Tiled
         map.getObjectLayer('ennemis').objects.forEach((objet) => {
-
-            this.groupe_ennemis.create(objet.x, objet.y, 'snake'); 
-            this.groupe_ennemis = new Mobs (this,objet.x, objet.y, "snake")
+            this.groupe_ennemis.add(new Mobs (this,objet.x, objet.y, "snake"));
             
             this.physics.add.collider(this.groupe_ennemis,sol);
             this.physics.add.collider(this.groupe_ennemis,mur);
         });
         
-        this.groupe_ennemis.body.setImmovable(true);
+        console.log(this.groupe_ennemis.children)
+
+        // le groupe / les elements du groupe / un tableau qui contient 
+        this.groupe_ennemis.children.entries.forEach(mob => {
+            mob.body.setImmovable(true);
+        });
 
         this.physics.add.collider(this.player, this.groupe_ennemis, this.player.recoit_degats);
 
@@ -118,7 +121,7 @@ export default class lv_01 extends Phaser.Scene {
         this.physics.add.collider(this.groupe_ennemis, this.slash, this.player.slash_mobs);
 
         this.physics.add.collider(this.player, this.groupe_bullets, (player, bullet) => {
-            this.groupe_ennemis.inflige_degats(player, bullet);
+            this.player.inflige_degats(player, bullet);
         });
 
         //this.physics.add.collider(this.slash, this.groupe_bullets, this.player.destruction_slash);
@@ -142,9 +145,10 @@ export default class lv_01 extends Phaser.Scene {
         }
 
         //Mobs
-        this.groupe_ennemis.updateMob();
-
-        this.groupe_ennemis.attaque(this, this.sprite_tir);
+        this.groupe_ennemis.children.entries.forEach(mob => {
+            mob.updateMob();
+            mob.attaque(this, this.sprite_tir);
+        });
 
         //console.log (this.groupe_ennemis.time_from_last_shot)
     }

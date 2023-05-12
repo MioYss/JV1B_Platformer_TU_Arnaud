@@ -39,20 +39,4 @@ export default class Mobs extends Phaser.Physics.Arcade.Sprite {
             this.time_from_last_shot = new Date().getTime(); // on donne une nouvelle valauer a timefrom, on l'actualise pour avoir un delai
         }
     }
-    
-    inflige_degats(player, bullet){
-
-        bullet.destroy();
-
-        player.hp -= 1; 
-        if(player.hp <= 0) {
-            //player.scene.scene.start("menu");
-            this.mort_player()
-        }
-    }
-
-    mort_player(){
-
-        this.scene.scene.restart()
-    }
 }
