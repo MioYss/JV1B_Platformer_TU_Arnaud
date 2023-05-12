@@ -10,7 +10,6 @@ export default class Mobs extends Phaser.Physics.Arcade.Sprite {
         scene.add.existing(this)
         this.setCollideWorldBounds(true);
 
-        this.updateMob();
         this.time_from_last_shot = 0; 
         this.fire_cooldown = 1000; 
 
@@ -28,7 +27,7 @@ export default class Mobs extends Phaser.Physics.Arcade.Sprite {
 
     attaque(scene,sprite) {   
 
-
+        if(!this.body) return;
         //timer cree par phaser - valaeur donner et on regarde la différence
         if(new Date().getTime() - this.time_from_last_shot < this.fire_cooldown){
              return; 
