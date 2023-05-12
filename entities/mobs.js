@@ -13,6 +13,8 @@ export default class Mobs extends Phaser.Physics.Arcade.Sprite {
         this.updateMob();
         this.time_from_last_shot = 0; 
         this.fire_cooldown = 1000; 
+
+        this.hp = 1
         
     }
 

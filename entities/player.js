@@ -1,3 +1,4 @@
+import Slash from "./slash.js";
 
 export default class Player extends Phaser.Physics.Arcade.Sprite {
 
@@ -21,7 +22,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.hp = 1
         this.duree_invulnerable = 1000
 
-
+        this.time_from_last_slash = 0
+        this.slash_cooldown = 200
 
     }
 
@@ -53,7 +55,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         if (this.keyboard.up.isDown && this.body.blocked.down) { // si touche bas appuyée 
             this.setVelocityY(-300); //vitesse 
-            this.direction = "down"
+            this.direction = "up"
         }
         console.log(this.direction)
 
@@ -126,4 +128,36 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         this.scene.scene.restart()
     }
+
+    attaque_slash(scene,sprite) {
+
+        //timer cree par phaser - valaeur donner et on regarde la différence
+        if(new Date().getTime() - this.time_from_last_slash < this.slash_cooldown){
+            return; 
+        } 
+
+        else{
+           this.slash = new Slash (scene, this.x, this.y, sprite);
+           this.slash.tirer(this.direction);
+           this.time_from_last_slash = new Date().getTime(); // on donne une nouvelle valauer a timefrom, on l'actualise pour avoir un delai
+
+        } 
+
+    }
+
+    destruction_slash(bullet, slash) {
+
+        bullet.destroy();
+        slash.destroy();
+
+    }
+
+    slash_mobs(ennemi, slash) {
+
+        slash.destroy();
+        ennemi.destroy(); 
+
+    }
+
+
 }

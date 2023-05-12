@@ -1,6 +1,8 @@
 import Player from "../entities/player.js";
 import Mobs from "../entities/mobs.js";
 
+var keyA;
+
 export default class lv_01 extends Phaser.Scene {
     constructor() {
         
@@ -24,6 +26,8 @@ export default class lv_01 extends Phaser.Scene {
 
     this.load.image("sprite_tir", "assets/projectile.png"); //Sprite tir
 
+    this.load.image("slash", "assets/slash.png"); //Sprite tir
+
     }
 
     
@@ -31,6 +35,7 @@ export default class lv_01 extends Phaser.Scene {
 
     create() {
 
+        keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
         //this.scene.start('salle_01', { hp: 3 })
 
         console.log(this)
@@ -90,6 +95,8 @@ export default class lv_01 extends Phaser.Scene {
 
         this.groupe_bullets = this.physics.add.group();
 
+        this.slash = this.physics.add.group();
+
         console.log(map)
 
         //Creation des ennemis à partir du layer objet dans Tiled
@@ -108,23 +115,38 @@ export default class lv_01 extends Phaser.Scene {
 
         this.physics.add.collider(mur, this.groupe_bullets, this.player.annihilation);
 
+        this.physics.add.collider(this.groupe_ennemis, this.slash, this.player.slash_mobs);
+
         this.physics.add.collider(this.player, this.groupe_bullets, (player, bullet) => {
             this.groupe_ennemis.inflige_degats(player, bullet);
         });
 
+        //this.physics.add.collider(this.slash, this.groupe_bullets, this.player.destruction_slash);
+
+        this.physics.add.collider(this.groupe_bullets, this.slash, (bullet, slash) => {
+            this.player.destruction_slash(bullet, slash);
+        });
     }
 
 
     update() {
         
-        console.log(this.player);
+        //Player
         this.player.deplacement();
-        //this.ennemis.updateMob();
+
+        if (keyA.isDown) {
+
+            console.log ("test A");
+            this.player.attaque_slash(this, this.slash);
+            console.log (this)
+        }
+
+        //Mobs
         this.groupe_ennemis.updateMob();
 
         this.groupe_ennemis.attaque(this, this.sprite_tir);
 
-        console.log (this.groupe_ennemis.time_from_last_shot)
+        //console.log (this.groupe_ennemis.time_from_last_shot)
     }
 
 };
