@@ -4,7 +4,7 @@ export default class menu extends Phaser.Scene {
         super("menu");
     }
     preload() {
-        this.load.image('ecran', '/assets/ecran_titre.png');
+        this.load.image('ecran', '../assets/ecran_titre.png');
      
         
     }

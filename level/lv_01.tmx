@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="1">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="4">
+ <editorsettings>
+  <export target="lv_01.json" format="json"/>
+ </editorsettings>
  <tileset firstgid="1" name="tile_set" tilewidth="32" tileheight="32" tilecount="25" columns="5">
   <image source="../assets/tile_set.png" width="160" height="160"/>
   <tile id="1">
@@ -13,6 +16,14 @@
    </properties>
   </tile>
  </tileset>
+ <objectgroup id="3" name="ennemis">
+  <object id="1" x="512.716" y="519.422">
+   <point/>
+  </object>
+  <object id="3" x="797.392" y="522.403">
+   <point/>
+  </object>
+ </objectgroup>
  <layer id="1" name="sol" width="30" height="20" opacity="0.9">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -20,7 +31,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,2,2,2,2,0,0,0,2,2,2,2,2,0,0,0,2,2,2,2,0,0,0,0,0,0,0,0,
+0,2,0,2,2,2,2,0,0,0,2,2,2,2,2,0,0,0,2,2,2,2,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

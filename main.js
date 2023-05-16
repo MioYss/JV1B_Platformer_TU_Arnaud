@@ -1,10 +1,10 @@
-import lv_01 from "./lv_01.js";
-import menu from "./menu.js";
+import lv_01 from "./levels/lv_01.js";
+import menu from "/levels/menu.js";
 
 
 var config = {
     type: Phaser.AUTO,
-    width: 1280, height: 720,
+    width: 1280, height: 720, //W=896 H=448
     physics: {
         default: 'arcade',
         arcade: {
