@@ -35,7 +35,15 @@ export default class Mobs extends Phaser.Physics.Arcade.Sprite {
 
         else {
             this.tir = new Tir (scene, this.x, this.y, sprite);
-            this.tir.tirer(this.direction);
+
+            var direction_tir = new Phaser.Math.Vector2(0, 0);
+
+            direction_tir.x = this.y - this.x;
+            direction_tir.y = window.dataPlayer.y - window.dataPlayer.x;
+
+            direction_tir.normalize();
+
+            this.tir.tirer(direction_tir);
             this.time_from_last_shot = new Date().getTime(); // on donne une nouvelle valauer a timefrom, on l'actualise pour avoir un delai
         }
     }

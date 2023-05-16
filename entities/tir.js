@@ -24,22 +24,22 @@ export default class Tir extends Phaser.Physics.Arcade.Sprite {
             
             console.log ("tir direction: "+ direction)
 
-            if (direction === 'left') { coefDirX = -1; coefDirY = 0} 
+           /* if (direction === 'left') { coefDirX = -1; coefDirY = 0} 
 
                 else if (direction === 'right') { coefDirX = 1; coefDirY = 0}
 
                 else if (direction === 'up') { coefDirY = 1; coefDirX = 0}
 
-                else if (direction === 'down') { coefDirY = -1; coefDirX = 0}
+                else if (direction === 'down') { coefDirY = -1; coefDirX = 0}*/
 
             // on crée la balle a coté du joueur
-            var sprite_tir = this.scene.groupe_bullets.create(this.x + (25 * coefDirX), this.y -4, 'sprite_tir');
+            var sprite_tir = this.scene.groupe_bullets.create(this.x + (25 * direction.x), this.y -4, 'sprite_tir');
 
             // parametres physiques de la balle.
             
             sprite_tir.setCollideWorldBounds(true);
             sprite_tir.body.allowGravity =false;
-            sprite_tir.setVelocity(1000 * coefDirX, 1000 * coefDirY); // vitesse en x et en y
+            sprite_tir.setVelocity(500 * direction.x, 500 * direction.y); // vitesse en x et en y
 
         } 
 }
