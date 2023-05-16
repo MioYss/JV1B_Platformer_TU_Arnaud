@@ -16,13 +16,11 @@ export default class Slash extends Phaser.Physics.Arcade.Sprite {
         tirer( direction) {
             
             // mesasge d'alerte affichant les attributs de player
-            console.log ("joueur en position"+ this.x + ","+ this.y + ", direction du tir: "
-            +direction) ; 
+            console.log ("joueur en position"+ window.dataPlayer.x + ","+ window.dataPlayer.y + ", direction du tir: "
+            +window.dataPlayer.direction) ; 
 
             var coefDirX;
             var coefDirY;
-            
-            console.log ("tir direction: "+ direction)
 
             if (direction == 'left') { coefDirX = -1; coefDirY = 0} 
 

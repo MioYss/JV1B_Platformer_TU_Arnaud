@@ -12,7 +12,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         scene.add.existing(this)
         this.setCollideWorldBounds(true);
 
-        this.direction = 'left';
+        this.direction;
 
         // declaration variable
         this.wall_jump = true;
@@ -40,13 +40,13 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         if (this.keyboard.left.isDown) { //si la touche gauche est appuyée
             this.setVelocityX(-300); //alors vitesse négative en X
-            this.direction = "left"
+            window.dataPlayer.direction = "left"
 
         }
 
         else if (this.keyboard.right.isDown) { //sinon si la touche droite est appuyée
             this.setVelocityX(300); //alors vitesse positive en X
-            this.direction = "right"
+            window.dataPlayer.direction = "right"
         }
         
         else {
@@ -55,9 +55,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         if (this.keyboard.up.isDown && this.body.blocked.down) { // si touche bas appuyée 
             this.setVelocityY(-300); //vitesse 
-            this.direction = "up"
+            window.dataPlayer.direction = "up"
         }
-        console.log(this.direction)
 
 
          // Creation  du Wall Jump 
@@ -84,6 +83,9 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
                             
             }
         }
+
+        window.dataPlayer.x = this.x;
+        window.dataPlayer.y = this.y;
     }
 
     recoit_degats(player, ennemi){
@@ -93,28 +95,6 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         if(player.hp <= 0) {
             player.mort_player()
         }
-        /*if(player.invulnerable == false){
-            player.invulnerable = true;
-            console.log(player.invulnerable)
-            player.hp -= 1;
-            
-            if(player.hp <= 0) {
-                //player.scene.scene.start("menu");
-                this.mort_player()
-            }
-
-
-            player.setTint(0xff0000);  // met le player rouge
-            player.scene.cameras.main.shake(200, 0.01); // shake de cam
-            console.log(player.hp); 
-
-            setTimeout(() => {
-                player.invulnerable = false;
-                player.setTint(0xffffff); // met le player normal
-    
-            }, player.duree_invulnerable);
-            
-        }*/
     }
 
     annihilation(mur, bullet){
@@ -130,7 +110,6 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         player.hp -= 1; 
         if(player.hp <= 0) {
-            //player.scene.scene.start("menu");
             this.mort_player()
         }
     }
@@ -149,7 +128,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         else{
            this.slash = new Slash (scene, this.x, this.y, sprite);
-           this.slash.tirer(this.direction);
+           this.slash.tirer(window.dataPlayer.direction);
            this.time_from_last_slash = new Date().getTime(); // on donne une nouvelle valauer a timefrom, on l'actualise pour avoir un delai
 
         } 

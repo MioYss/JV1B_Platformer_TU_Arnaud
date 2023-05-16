@@ -38,7 +38,6 @@ export default class lv_01 extends Phaser.Scene {
         keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
         //this.scene.start('salle_01', { hp: 3 })
 
-        console.log(this)
         // chargement de la carte
         const map = this.add.tilemap("lv_01");
     
@@ -97,8 +96,6 @@ export default class lv_01 extends Phaser.Scene {
 
         this.slash = this.physics.add.group();
 
-        console.log(map)
-
         //Creation des ennemis à partir du layer objet dans Tiled
         map.getObjectLayer('ennemis').objects.forEach((objet) => {
             this.groupe_ennemis.add(new Mobs (this,objet.x, objet.y, "snake"));
@@ -150,7 +147,7 @@ export default class lv_01 extends Phaser.Scene {
             mob.attaque(this, this.sprite_tir);
         });
 
-        //console.log (this.groupe_ennemis.time_from_last_shot)
+        console.log(this.player.elementPosition)
     }
 
 };
