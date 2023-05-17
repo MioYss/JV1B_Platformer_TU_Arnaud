@@ -27,8 +27,10 @@ export default class Mobs extends Phaser.Physics.Arcade.Sprite {
 
     attaque(scene,sprite) {   
 
+        const player = this.scene.player;
+
         if(!this.body) return;
-        //timer cree par phaser - valaeur donner et on regarde la différence
+        //timer cree par phaser - valeur donner et on regarde la différence
         if(new Date().getTime() - this.time_from_last_shot < this.fire_cooldown){
              return; 
         } 
@@ -36,11 +38,9 @@ export default class Mobs extends Phaser.Physics.Arcade.Sprite {
         else {
             this.tir = new Tir (scene, this.x, this.y, sprite);
 
+            //Calcule la direcction du joueur
             var direction_tir = new Phaser.Math.Vector2(0, 0);
-
-            direction_tir.x = this.y - this.x;
-            direction_tir.y = window.dataPlayer.y - window.dataPlayer.x;
-
+            direction_tir.setTo(player.x - this.x , player.y - this.y);
             direction_tir.normalize();
 
             this.tir.tirer(direction_tir);
