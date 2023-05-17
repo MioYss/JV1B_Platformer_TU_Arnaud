@@ -39,5 +39,12 @@ export default class Vortex extends Phaser.Physics.Arcade.Sprite {
             
             sprite_vortex.body.allowGravity =false;
 
+            // faire un var = true
+            // une autre false
+            // fais 2 temps sur le E du vortex
+            // SI true, vortex qui arrete les balle, et si il y a eu colision var : nombre de balle arretrer +1
+            // Si fasle, vortex renvoie et crée des balles ?
+            
+
         } 
 }
