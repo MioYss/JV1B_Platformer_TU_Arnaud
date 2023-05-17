@@ -1,5 +1,5 @@
 import Slash from "./slash.js";
-//import Vortex from "./vortex.js";
+import Vortex from "./vortex.js";
 
 export default class Player extends Phaser.Physics.Arcade.Sprite {
 
@@ -153,7 +153,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
     }
 
-    /*attaque_vortex(scene,sprite){
+    attaque_vortex(scene,sprite){
 
         //timer cree par phaser - valaeur donner et on regarde la différence
         if(new Date().getTime() - this.time_from_last_vortex < this.vortex_cooldown){
@@ -167,6 +167,12 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         
         } 
 
-    }*/
+    }
 
+    absorption_vortex(bullet, vortex) {
+
+        bullet.destroy();
+        vortex.destroy();
+
+    }
 }

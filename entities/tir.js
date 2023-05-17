@@ -16,9 +16,6 @@ export default class Tir extends Phaser.Physics.Arcade.Sprite {
         tirer( direction) {
             
             // mesasge d'alerte affichant les attributs de player
-            console.log ("joueur en position"+" "+ window.dataPlayer.x + ","+ window.dataPlayer.y + ", direction du tir: "
-            +direction) ; 
-
             var coefDirX;
             var coefDirY;
             

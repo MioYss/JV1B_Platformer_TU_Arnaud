@@ -133,6 +133,10 @@ export default class lv_01 extends Phaser.Scene {
         this.physics.add.collider(this.groupe_bullets, this.slash, (bullet, slash) => {
             this.player.destruction_slash(bullet, slash);
         });
+
+        this.physics.add.collider(this.groupe_vortex, this.groupe_bullets, (groupe_vortex, bullet) => {
+            this.player.absorption_vortex(bullet ,groupe_vortex);
+        });
     }
 
 
@@ -161,7 +165,7 @@ export default class lv_01 extends Phaser.Scene {
             mob.attaque(this, this.sprite_tir);
         });
 
-        console.log(this.player.elementPosition)
+        //console.log(this.player.elementPosition)
     }
 
 };

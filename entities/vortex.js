@@ -1,5 +1,5 @@
 
-/*export default class Vortex extends Phaser.Physics.Arcade.Sprite {
+export default class Vortex extends Phaser.Physics.Arcade.Sprite {
 
     constructor(scene, x, y, texture) {
         super(scene, x, y, texture); 
@@ -32,12 +32,12 @@
                 else if (direction === 'down') { coefDirY = -1; coefDirX = 0}
 
 
-            // on crée la balle a coté du joueur
-            var sprite_vortex = this.scene.groupe_vortex.create(this.x + (25 * direction.x), this.y -4, 'sprite_vortex');
+            // on crée le vortex a coté du joueur
+            var sprite_vortex = this.scene.groupe_vortex.create(this.x + (25 * coefDirX), this.y -4, 'sprite_vortex');
 
             // parametres physiques de la balle.
             
             sprite_vortex.body.allowGravity =false;
 
         } 
-}*/
+}
