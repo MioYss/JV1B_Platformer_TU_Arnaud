@@ -2,6 +2,7 @@ import Player from "../entities/player.js";
 import Mobs from "../entities/mobs.js";
 
 var keyA;
+var keyE;
 
 export default class lv_01 extends Phaser.Scene {
     constructor() {
@@ -28,6 +29,8 @@ export default class lv_01 extends Phaser.Scene {
 
     this.load.image("slash", "assets/slash.png"); //Sprite tir
 
+    this.load.image("sprite_vortex", "assets/vortex.png"); //Sprite tir
+
     }
 
     
@@ -36,6 +39,7 @@ export default class lv_01 extends Phaser.Scene {
     create() {
 
         keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
+        keyE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E);
         //this.scene.start('salle_01', { hp: 3 })
 
         // chargement de la carte
@@ -96,6 +100,8 @@ export default class lv_01 extends Phaser.Scene {
 
         this.slash = this.physics.add.group();
 
+        this.groupe_vortex = this.physics.add.group();
+
         //Creation des ennemis à partir du layer objet dans Tiled
         map.getObjectLayer('ennemis').objects.forEach((objet) => {
             this.groupe_ennemis.add(new Mobs (this,objet.x, objet.y, "snake"));
@@ -139,6 +145,13 @@ export default class lv_01 extends Phaser.Scene {
 
             console.log ("test A");
             this.player.attaque_slash(this, this.slash);
+            console.log (this)
+        }
+
+        if (keyE.isDown) {
+
+            console.log ("test E");
+            this.player.attaque_vortex(this, this.sprite_vortex);
             console.log (this)
         }
 

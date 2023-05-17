@@ -1,4 +1,5 @@
 import Slash from "./slash.js";
+//import Vortex from "./vortex.js";
 
 export default class Player extends Phaser.Physics.Arcade.Sprite {
 
@@ -24,6 +25,9 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         this.time_from_last_slash = 0
         this.slash_cooldown = 200
+
+        this.time_from_last_vortex = 0
+        this.vortex_cooldown = 200
 
     }
 
@@ -129,7 +133,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         else{
            this.slash = new Slash (scene, this.x, this.y, sprite);
            this.slash.tirer(window.dataPlayer.direction);
-           this.time_from_last_slash = new Date().getTime(); // on donne une nouvelle valauer a timefrom, on l'actualise pour avoir un delai
+           this.time_from_last_slash = new Date().getTime(); // on donne une nouvelle valeur a timefrom, on l'actualise pour avoir un delai
 
         } 
 
@@ -149,5 +153,20 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
     }
 
+    /*attaque_vortex(scene,sprite){
+
+        //timer cree par phaser - valaeur donner et on regarde la différence
+        if(new Date().getTime() - this.time_from_last_vortex < this.vortex_cooldown){
+            return; 
+        } 
+        
+        else{
+            this.sprite_vortex = new Vortex (scene, this.x, this.y, sprite);
+            this.sprite_vortex.activer(window.dataPlayer.direction);
+            this.time_from_last_vortex = new Date().getTime(); // on donne une nouvelle valeur a timefrom, on l'actualise pour avoir un delai
+        
+        } 
+
+    }*/
 
 }
