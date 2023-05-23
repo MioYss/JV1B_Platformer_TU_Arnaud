@@ -1,5 +1,6 @@
 import Slash from "./slash.js";
 import Vortex from "./vortex.js";
+import tir_vortex from "./tir_vortex.js";
 
 export default class Player extends Phaser.Physics.Arcade.Sprite {
 
@@ -29,6 +30,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.time_from_last_vortex = 0
         this.vortex_cooldown = 200
 
+        this.swap = false
     }
 
     blocage_touche () {
@@ -155,17 +157,35 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
     attaque_vortex(scene,sprite){
 
-        //timer cree par phaser - valaeur donner et on regarde la différence
-        if(new Date().getTime() - this.time_from_last_vortex < this.vortex_cooldown){
-            return; 
-        } 
-        
-        else{
-            this.sprite_vortex = new Vortex (scene, this.x, this.y, sprite);
-            this.sprite_vortex.activer(window.dataPlayer.direction);
+        if (this.swap == false) {
+            //timer cree par phaser - valaeur donner et on regarde la différence
+            console.log("01" + this.swap)
+            if(new Date().getTime() - this.time_from_last_vortex < this.vortex_cooldown){
+                return; 
+            } 
+            
+            else{
+                this.sprite_vortex = new Vortex (scene, this.x, this.y, sprite);
+                console.log("02" + this.swap)
+                this.sprite_vortex.activer(window.dataPlayer.direction);
+                console.log("03" + this.swap)
+                this.time_from_last_vortex = new Date().getTime(); // on donne une nouvelle valeur a timefrom, on l'actualise pour avoir un delai
+                console.log("04" + this.swap)
+                this.swap = true;
+                console.log("05" + this.swap)
+            } 
+        }
+    }
+
+    attaque_vortex2(scene,sprite){
+
+        if (this.swap == true) {
+            console.log("06" + this.swap)
+            this.sprite_ball = new tir_vortex (scene, this.x, this.y, sprite);
+            this.sprite_ball.activer2(this.direction);
             this.time_from_last_vortex = new Date().getTime(); // on donne une nouvelle valeur a timefrom, on l'actualise pour avoir un delai
-        
-        } 
+            this.swap = false; 
+        }
 
     }
 

@@ -1,3 +1,4 @@
+var groupe_vortex;
 
 export default class Vortex extends Phaser.Physics.Arcade.Sprite {
 
@@ -8,6 +9,7 @@ export default class Vortex extends Phaser.Physics.Arcade.Sprite {
         scene.physics.world.enable(this);
         scene.add.existing(this);
         this.setCollideWorldBounds(true);
+        
 
     }
     
@@ -33,18 +35,34 @@ export default class Vortex extends Phaser.Physics.Arcade.Sprite {
 
 
             // on crée le vortex a coté du joueur
-            var sprite_vortex = this.scene.groupe_vortex.create(this.x + (25 * coefDirX), this.y -4, 'sprite_vortex');
+            this.sprite_vortex = this.scene.groupe_vortex.create(this.x + (25 * coefDirX), this.y -4, 'sprite_vortex');
 
             // parametres physiques de la balle.
             
-            sprite_vortex.body.allowGravity =false;
-
-            // faire un var = true
-            // une autre false
-            // fais 2 temps sur le E du vortex
-            // SI true, vortex qui arrete les balle, et si il y a eu colision var : nombre de balle arretrer +1
-            // Si fasle, vortex renvoie et crée des balles ?
+            this.sprite_vortex.body.allowGravity =false;
             
-
         } 
+
+        /*activer2(direction) {
+            
+            var coefDirX;
+            var coefDirY;
+
+            if (direction == 'left') { coefDirX = -1; coefDirY = 0} 
+
+                else if (direction == 'right') { coefDirX = 1; coefDirY = 0}
+
+                else if (direction == 'up') { coefDirY = 1; coefDirX = 0}
+
+                else if (direction == 'down') { coefDirY = -1; coefDirX = 0}
+
+
+            // on crée a coté du joueur
+            this.sprite_ball = this.scene.groupe_ball_energie.create(this.x + (25 * coefDirX), this.y -4, 'sprite_ball');
+
+            // parametres physiques de la balle.
+            this.sprite_ball.setVelocity(500 * coefDirX, 500 * coefDirY); // vitesse en x et en y
+            this.sprite_ball.body.allowGravity =false;
+
+        }*/
 }

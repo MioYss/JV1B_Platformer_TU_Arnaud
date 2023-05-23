@@ -3,11 +3,13 @@ import Mobs from "../entities/mobs.js";
 
 var keyA;
 var keyE;
+var keyR;
 
 export default class lv_01 extends Phaser.Scene {
     constructor() {
         
         super("lv_01");
+        this.swap = false
 
     }
 
@@ -27,9 +29,11 @@ export default class lv_01 extends Phaser.Scene {
 
     this.load.image("sprite_tir", "assets/projectile.png"); //Sprite tir
 
-    this.load.image("slash", "assets/slash.png"); //Sprite tir
+    this.load.image("slash", "assets/slash.png");
 
-    this.load.image("sprite_vortex", "assets/vortex.png"); //Sprite tir
+    this.load.image("sprite_vortex", "assets/vortex.png"); 
+
+    this.load.image("sprite_ball", "assets/ball_energie.png"); 
 
     }
 
@@ -40,6 +44,7 @@ export default class lv_01 extends Phaser.Scene {
 
         keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
         keyE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E);
+        keyR = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
         //this.scene.start('salle_01', { hp: 3 })
 
         // chargement de la carte
@@ -102,6 +107,8 @@ export default class lv_01 extends Phaser.Scene {
 
         this.groupe_vortex = this.physics.add.group();
 
+        this.groupe_ball_energie = this.physics.add.group();
+
         //Creation des ennemis à partir du layer objet dans Tiled
         map.getObjectLayer('ennemis').objects.forEach((objet) => {
             this.groupe_ennemis.add(new Mobs (this,objet.x, objet.y, "snake"));
@@ -121,6 +128,8 @@ export default class lv_01 extends Phaser.Scene {
 
         this.physics.add.collider(mur, this.groupe_bullets, this.player.annihilation);
         this.physics.add.collider(sol, this.groupe_bullets, this.player.annihilation);
+
+        this.physics.add.collider(mur, this.groupe_ball_energie, this.player.annihilation);
 
         this.physics.add.collider(this.groupe_ennemis, this.slash, this.player.slash_mobs);
 
@@ -156,7 +165,11 @@ export default class lv_01 extends Phaser.Scene {
 
             console.log ("test E");
             this.player.attaque_vortex(this, this.sprite_vortex);
-            console.log (this)
+        }
+
+        if (keyR.isDown) {
+            console.log ("test R");
+            this.player.attaque_vortex2(this, this.sprite_ball);
         }
 
         //Mobs

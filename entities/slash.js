@@ -1,4 +1,4 @@
-var groupe_bullets;
+var slash;
 
 export default class Slash extends Phaser.Physics.Arcade.Sprite {
 
