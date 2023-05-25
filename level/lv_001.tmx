@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="50" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="9">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="50" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="11">
  <editorsettings>
   <export target="lv_001.json" format="json"/>
  </editorsettings>
@@ -80,6 +80,11 @@
    <point/>
   </object>
   <object id="8" x="1388" y="918.667">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="Calque d'Objets 2">
+  <object id="9" x="52" y="900">
    <point/>
   </object>
  </objectgroup>
