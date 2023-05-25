@@ -1,0 +1,48 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "lv_001.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.75,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 831.9999999999999,
+                "y": 511.33333333333337
+            }
+        },
+        "lv_001.tmx#tile_set_tuto": {
+            "scaleInDock": 1
+        },
+        "tuto 01.tmx": {
+            "scale": 1.3285156249999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 478.7297853572479,
+                "y": 319.52955013231406
+            }
+        },
+        "tuto 01.tmx#tile_set_tuto": {
+            "scaleInDock": 1
+        }
+    },
+    "last.exportedFilePath": "C:/Users/game/Documents/GitHub/Mario_Ps2/level",
+    "last.imagePath": "C:/Users/game/Documents/GitHub/Mario_Ps2/assets",
+    "map.lastUsedExportFilter": "Tous les Fichiers (*)",
+    "map.lastUsedFormat": "tmx",
+    "map.width": 50,
+    "openFiles": [
+    ],
+    "project": "lv_001.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+    ],
+    "tileset.embedInMap": true
+}

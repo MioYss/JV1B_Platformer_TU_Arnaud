@@ -9,6 +9,7 @@
     ],
     "fileStates": {
         "": {
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "#tile_set tuto": {
@@ -19,8 +20,8 @@
             "scale": 1.3285156249999999,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 480.2352249338431,
-                "y": 320.28226992061167
+                "x": 480.98794472214064,
+                "y": 217.15965892384594
             }
         },
         "Tuto 01.tmx#tile_set tuto": {
@@ -38,32 +39,38 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "tile_set tuto.tsx": {
+            "scaleInDock": 1
+        },
         "tuto 01.tmx": {
             "scale": 1.3285156249999999,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 480.2352249338431,
-                "y": 320.28226992061167
+                "x": 477.2243457806528,
+                "y": 487.3860629226698
             }
         },
         "tuto 01.tmx#tile_set tuto": {
             "scaleInDock": 1
+        },
+        "tuto 01.tmx#tile_set_tuto": {
+            "scaleInDock": 1
         }
     },
     "last.exportedFilePath": "C:/Users/game/Documents/GitHub/Mario_Ps2/level",
+    "last.externalTilesetPath": "C:/Users/game/Documents/GitHub/Mario_Ps2/level",
     "last.imagePath": "C:/Users/game/Documents/GitHub/Mario_Ps2/assets",
     "map.lastUsedExportFilter": "Tous les Fichiers (*)",
     "map.lastUsedFormat": "tmx",
     "map.width": 30,
     "openFiles": [
-        "Tuto 01.tmx",
         "tuto 01.tmx"
     ],
     "project": "Tuto 01.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "Tuto 01.tmx",
         "tuto 01.tmx",
+        "Tuto 01.tmx",
         "lv_01.tmx"
     ],
     "tileset.embedInMap": true
