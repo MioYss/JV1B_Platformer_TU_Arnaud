@@ -1,0 +1,36 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "lv_03.tmx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "": {
+            "scaleInEditor": 1
+        },
+        "lv_03.tmx": {
+            "scale": 1.14890625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 480.0217598259214,
+                "y": 320.30463756289953
+            }
+        },
+        "lv_03.tmx#tile_set_tuto": {
+            "scaleInDock": 1
+        }
+    },
+    "last.imagePath": "I:/Cour 2/Mario/Mario_Ps2/assets",
+    "map.lastUsedFormat": "tmx",
+    "openFiles": [
+        "lv_03.tmx"
+    ],
+    "project": "lv_03.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "lv_03.tmx"
+    ],
+    "tileset.embedInMap": true
+}

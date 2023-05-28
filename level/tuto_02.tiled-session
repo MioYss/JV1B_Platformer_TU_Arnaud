@@ -1,0 +1,34 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "tuto_02.tmx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "tuto_02.tmx": {
+            "scale": 1.14890625,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 476.5401876784985,
+                "y": 320.30463756289953
+            }
+        },
+        "tuto_02.tmx#tile_set_tuto": {
+            "scaleInDock": 1
+        }
+    },
+    "last.exportedFilePath": "I:/Cour 2/Mario/Mario_Ps2/level",
+    "last.imagePath": "I:/Cour 2/Mario/Mario_Ps2/assets",
+    "map.lastUsedExportFilter": "Tous les Fichiers (*)",
+    "map.lastUsedFormat": "tmx",
+    "openFiles": [
+        "tuto_02.tmx"
+    ],
+    "project": "tuto_02.tiled-project",
+    "recentFiles": [
+        "tuto_02.tmx"
+    ],
+    "tileset.embedInMap": true
+}
