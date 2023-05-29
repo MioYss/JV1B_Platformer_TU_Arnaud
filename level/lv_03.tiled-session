@@ -5,6 +5,7 @@
     },
     "activeFile": "lv_03.tmx",
     "expandedProjectPaths": [
+        "."
     ],
     "fileStates": {
         "": {
@@ -22,11 +23,11 @@
             "scaleInDock": 1
         },
         "lv_03.tmx": {
-            "scale": 1.14890625,
-            "selectedLayer": 0,
+            "scale": 0.75,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 432.1501427988576,
-                "y": 321.17503059975513
+                "x": 1571.3333333333333,
+                "y": 329.33333333333337
             }
         },
         "lv_03.tmx#tile_set_tuto": {
@@ -43,8 +44,8 @@
     "project": "lv_03.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "lv_02.tmx",
-        "lv_03.tmx"
+        "lv_03.tmx",
+        "lv_02.tmx"
     ],
     "tileset.embedInMap": true
 }
