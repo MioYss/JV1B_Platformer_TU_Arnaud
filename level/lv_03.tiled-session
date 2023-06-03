@@ -11,26 +11,74 @@
         "": {
             "scaleInEditor": 1
         },
-        "lv_02.tmx": {
-            "scale": 0.6241279069767441,
+        "lv_001.tmx": {
+            "scale": 0.6893437499999999,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 640.0931532370751,
-                "y": 688.961341406614
+                "x": 824.6974024207807,
+                "y": 478.7161702706379
             }
+        },
+        "lv_001.tmx#tile_set_lab": {
+            "scaleInDock": 1
+        },
+        "lv_001.tmx#tile_set_tuto": {
+            "scaleInDock": 1
+        },
+        "lv_02.tmx": {
+            "scale": 0.5,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 605,
+                "y": 740
+            }
+        },
+        "lv_02.tmx#tile_set_lab": {
+            "scaleInDock": 1
         },
         "lv_02.tmx#tile_set_tuto": {
             "scaleInDock": 1
         },
         "lv_03.tmx": {
-            "scale": 0.75,
-            "selectedLayer": 1,
+            "scale": 0.5,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 1571.3333333333333,
-                "y": 329.33333333333337
+                "x": 1025,
+                "y": 748
             }
         },
+        "lv_03.tmx#tile_set_lab": {
+            "scaleInDock": 1
+        },
         "lv_03.tmx#tile_set_tuto": {
+            "scaleInDock": 1
+        },
+        "tuto 01.tmx": {
+            "scale": 1.14890625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 490.46647626818987,
+                "y": 187.1345029239766
+            }
+        },
+        "tuto 01.tmx#tile_set_lab": {
+            "scaleInDock": 1
+        },
+        "tuto 01.tmx#tile_set_tuto": {
+            "scaleInDock": 1
+        },
+        "tuto_02.tmx": {
+            "scale": 1.1825520833333334,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 477.35741026205676,
+                "y": 323.8757982823167
+            }
+        },
+        "tuto_02.tmx#tile_set_lab": {
+            "scaleInDock": 1
+        },
+        "tuto_02.tmx#tile_set_tuto": {
             "scaleInDock": 1
         }
     },
@@ -44,8 +92,11 @@
     "project": "lv_03.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "lv_03.tmx",
-        "lv_02.tmx"
+        "tuto_02.tmx",
+        "tuto 01.tmx",
+        "lv_02.tmx",
+        "lv_001.tmx",
+        "lv_03.tmx"
     ],
     "tileset.embedInMap": true
 }

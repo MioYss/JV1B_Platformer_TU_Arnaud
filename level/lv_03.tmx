@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="60" height="46" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="1">
- <editorsettings>
-  <export target="lv_03.json" format="json"/>
- </editorsettings>
  <tileset firstgid="1" name="tile_set_tuto" tilewidth="32" tileheight="32" tilecount="36" columns="6">
   <image source="../assets/tile_set_tuto.png" width="192" height="192"/>
   <tile id="0">
