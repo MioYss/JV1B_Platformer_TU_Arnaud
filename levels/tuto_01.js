@@ -17,7 +17,7 @@ export default class tuto_01 extends Phaser.Scene {
     preload() {
 
     // chargement tuiles de jeu
-    this.load.image("tile_set_tuto_01", "assets/tile_set_tuto.png");
+    this.load.image("tile_set_tuto_01", "assets/tile_set_lab.png");
 
     // chargement de la carte
     this.load.tilemapTiledJSON("tuto_01", "level/tuto_01.json");
@@ -52,7 +52,7 @@ export default class tuto_01 extends Phaser.Scene {
     
         // chargement du jeu de tuiles
         const tileset = map.addTilesetImage(
-          "tile_set_tuto", // Nom du tiled dans dossier
+          "tile_set_lab", // Nom du tiled dans dossier
           "tile_set_tuto_01" // Nom du tiled donner plus haut pour le rapel
         );
     
@@ -74,7 +74,7 @@ export default class tuto_01 extends Phaser.Scene {
     
         
         //CREATION JOUEUR ET PROPRIETES
-        this.player = new Player(this, 50,50, 'perso');
+        this.player = new Player(this, 47,309, 'perso');
 
         //Initialisation de la caméra et des limites de jeu
         this.cameras.main.setBounds(0, 0, 2048, 3584);

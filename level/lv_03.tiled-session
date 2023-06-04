@@ -55,14 +55,15 @@
         },
         "tuto 01.tmx": {
             "scale": 1.14890625,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
                 "x": 490.46647626818987,
                 "y": 187.1345029239766
             }
         },
         "tuto 01.tmx#tile_set_lab": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "tuto 01.tmx#tile_set_tuto": {
             "scaleInDock": 1
