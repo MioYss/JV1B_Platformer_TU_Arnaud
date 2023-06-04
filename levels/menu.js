@@ -4,7 +4,7 @@ export default class menu extends Phaser.Scene {
         super("menu");
     }
     preload() {
-        this.load.image('ecran', '../assets/ecran_titre.png');
+        this.load.image('ecran', '../assets/ecran_titre_02.png');
      
         
     }
@@ -12,7 +12,7 @@ export default class menu extends Phaser.Scene {
         this.cursors = this.input.keyboard.createCursorKeys();
 
         const startSpace = Phaser.Input.Keyboard.JustDown(this.cursors.space);
-        this.add.image(640, 360, 'ecran'); 
+        this.add.image(448, 224, 'ecran'); 
 
    
         
