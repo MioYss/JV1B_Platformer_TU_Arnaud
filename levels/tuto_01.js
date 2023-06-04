@@ -56,6 +56,11 @@ export default class tuto_01 extends Phaser.Scene {
           "tile_set_tuto_01" // Nom du tiled donner plus haut pour le rapel
         );
     
+        const back = map.createLayer( //'imp" nom donner au calque si besoin de le rapeller dans le code
+        "back_tuto_01", // Nom du calque tiled
+        tileset
+        ); 
+
         // chargement du calque background_01
         const sol = map.createLayer( //'imp" nom donner au calque si besoin de le rapeller dans le code
             "sol_tuto", // Nom du calque tiled
@@ -132,8 +137,8 @@ export default class tuto_01 extends Phaser.Scene {
 
         this.physics.add.collider(this.player, this.groupe_ennemis, this.player.recoit_degats);
 
-        this.physics.add.collider(mur, this.groupe_bullets, this.player.annihilation);
-        this.physics.add.collider(sol, this.groupe_bullets, this.player.annihilation);
+        this.physics.add.overlap(mur, this.groupe_bullets, this.player.annihilation);
+        this.physics.add.overlap(sol, this.groupe_bullets, this.player.annihilation);
 
         this.physics.add.collider(mur, this.groupe_ball_energie, this.player.annihilation);
 
