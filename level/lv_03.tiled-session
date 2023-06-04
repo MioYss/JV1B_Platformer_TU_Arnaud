@@ -76,10 +76,10 @@
         },
         "tuto_02.tmx": {
             "scale": 1.1825520833333334,
-            "selectedLayer": 0,
+            "selectedLayer": 4,
             "viewCenter": {
                 "x": 422.39154371283854,
-                "y": 324.72142699845847
+                "y": 323.8757982823167
             }
         },
         "tuto_02.tmx#tile_set_lab": {

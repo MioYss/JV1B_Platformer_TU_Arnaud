@@ -103,7 +103,7 @@ export default class tuto_02 extends Phaser.Scene {
         this.physics.add.collider(this.player, fin_tuto_02, () => {
         
             console.log ("test")
-            this.scene.start("lv_001", {
+            this.scene.start("lv_03", {
                 x : 1920,
                 y : 3500,
             });

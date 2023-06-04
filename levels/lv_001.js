@@ -55,6 +55,11 @@ export default class lv_001 extends Phaser.Scene {
           "tile_set_lab", // Nom du tiled dans dossier
           "tile_set_tuto_01" // Nom du tiled donner plus haut pour le rapel
         );
+
+        const back_lv_001 = map.createLayer( 
+            "back_lv_001", // Nom du calque tiled
+            tileset
+        ); 
     
         // chargement du calque background_01
         const sol = map.createLayer( //'imp" nom donner au calque si besoin de le rapeller dans le code
@@ -97,7 +102,7 @@ export default class lv_001 extends Phaser.Scene {
         this.physics.add.collider(this.player, fin_lv_001, () => {
         
             console.log ("test")
-            this.scene.start("lv_01", {
+            this.scene.start("lv_02", {
                 x : 1920,
                 y : 3500,
             });
