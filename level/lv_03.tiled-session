@@ -9,42 +9,45 @@
     ],
     "fileStates": {
         "": {
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "lv_001.tmx": {
-            "scale": 0.6893437499999999,
-            "selectedLayer": 0,
+            "scale": 0.75,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 824.6974024207807,
-                "y": 478.7161702706379
+                "x": 576.6666666666667,
+                "y": 272
             }
         },
         "lv_001.tmx#tile_set_lab": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "lv_001.tmx#tile_set_tuto": {
             "scaleInDock": 1
         },
         "lv_02.tmx": {
-            "scale": 0.5,
-            "selectedLayer": 4,
+            "scale": 0.75,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 605,
-                "y": 740
+                "x": 538,
+                "y": 352
             }
         },
         "lv_02.tmx#tile_set_lab": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "lv_02.tmx#tile_set_tuto": {
             "scaleInDock": 1
         },
         "lv_03.tmx": {
-            "scale": 0.5,
-            "selectedLayer": 0,
+            "scale": 0.33,
+            "selectedLayer": -1,
             "viewCenter": {
-                "x": 1025,
-                "y": 748
+                "x": 968.1818181818182,
+                "y": 657.5757575757576
             }
         },
         "lv_03.tmx#tile_set_lab": {
@@ -55,10 +58,10 @@
         },
         "tuto 01.tmx": {
             "scale": 1.14890625,
-            "selectedLayer": 1,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 490.46647626818987,
-                "y": 187.1345029239766
+                "x": 433.89092887256896,
+                "y": 186.2641098871209
             }
         },
         "tuto 01.tmx#tile_set_lab": {
@@ -72,12 +75,13 @@
             "scale": 1.1825520833333334,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 477.35741026205676,
+                "x": 422.39154371283854,
                 "y": 324.72142699845847
             }
         },
         "tuto_02.tmx#tile_set_lab": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "tuto_02.tmx#tile_set_tuto": {
             "scaleInDock": 1
@@ -99,5 +103,6 @@
         "lv_001.tmx",
         "lv_03.tmx"
     ],
+    "resizeMap.removeObjects": true,
     "tileset.embedInMap": true
 }

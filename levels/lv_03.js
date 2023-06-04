@@ -5,10 +5,10 @@ var keyA;
 var keyE;
 var keyR;
 
-export default class lv_001 extends Phaser.Scene {
+export default class lv_03 extends Phaser.Scene {
     constructor() {
         
-        super("lv_001");
+        super("lv_03");
         this.swap = false
 
     }
@@ -17,10 +17,10 @@ export default class lv_001 extends Phaser.Scene {
     preload() {
 
     // chargement tuiles de jeu
-    this.load.image("tile_set_tuto_01", "assets/tile_set_lab.png");
+    this.load.image("lv_03", "assets/tile_set_lab.png");
 
     // chargement de la carte
-    this.load.tilemapTiledJSON("lv_001", "level/lv_001.json");
+    this.load.tilemapTiledJSON("lv_03", "level/lv_03.json");
 
     this.load.spritesheet('perso','assets/perso.png',
         { frameWidth: 32, frameHeight: 48 });
@@ -48,33 +48,48 @@ export default class lv_001 extends Phaser.Scene {
         //this.scene.start('salle_01', { hp: 3 })
 
         // chargement de la carte
-        const map = this.add.tilemap("lv_001");
+        const map = this.add.tilemap("lv_03");
     
         // chargement du jeu de tuiles
         const tileset = map.addTilesetImage(
           "tile_set_lab", // Nom du tiled dans dossier
-          "tile_set_tuto_01" // Nom du tiled donner plus haut pour le rapel
+          "lv_03" // Nom du tiled donner plus haut pour le rapel
         );
-    
+
+            const back = map.createLayer( 
+            "back_lv_03", // Nom du calque tiled
+            tileset
+        ); 
+
+        const deco = map.createLayer( 
+            "deco_lv_03", // Nom du calque tiled
+            tileset
+        ); 
+
+        const toyo = map.createLayer( 
+            "toyo_lv_03", // Nom du calque tiled
+            tileset
+        ); 
+
         // chargement du calque background_01
         const sol = map.createLayer( //'imp" nom donner au calque si besoin de le rapeller dans le code
-            "sol_lv_001", // Nom du calque tiled
+            "sol_lv_03", // Nom du calque tiled
             tileset
         ); 
     
         const mur = map.createLayer( 
-            "mur_lv_001", // Nom du calque tiled
+            "mur_lv_03", // Nom du calque tiled
             tileset
         ); 
 
-        const fin_lv_001 = map.createLayer( 
-            "fin_lv_001", // Nom du calque tiled
+        const fin_lv_03 = map.createLayer( 
+            "fin_lv_03", // Nom du calque tiled
             tileset
         ); 
-    
-        
+
+
         //CREATION JOUEUR ET PROPRIETES
-        this.player = new Player(this, 48,918, 'perso');
+        this.player = new Player(this, 48,100, 'perso');
 
         //Initialisation de la caméra et des limites de jeu
         this.cameras.main.setBounds(0, 0, 2048, 3584);
@@ -93,11 +108,11 @@ export default class lv_001 extends Phaser.Scene {
         sol.setCollisionByExclusion(-1, true);
 
         //fin de niveau
-        fin_lv_001.setCollisionByExclusion(-1, true);
-        this.physics.add.collider(this.player, fin_lv_001, () => {
+        fin_lv_03.setCollisionByExclusion(-1, true);
+        this.physics.add.collider(this.player, fin_lv_03, () => {
         
             console.log ("test")
-            this.scene.start("lv_01", {
+            this.scene.start("lv_001", {
                 x : 1920,
                 y : 3500,
             });
@@ -116,7 +131,7 @@ export default class lv_001 extends Phaser.Scene {
         this.groupe_ball_energie = this.physics.add.group();
 
         //Creation des ennemis à partir du layer objet dans Tiled
-        map.getObjectLayer('ennemis_lv_001').objects.forEach((objet) => {
+        map.getObjectLayer('ennemis_lv_03').objects.forEach((objet) => {
             this.groupe_ennemis.add(new Mobs (this,objet.x, objet.y, "snake"));
             
             this.physics.add.collider(this.groupe_ennemis,sol);
