@@ -126,8 +126,8 @@ export default class lv_01 extends Phaser.Scene {
 
         this.physics.add.collider(this.player, this.groupe_ennemis, this.player.recoit_degats);
 
-        this.physics.add.overlap(mur, this.groupe_bullets, this.player.annihilation);
-        this.physics.add.overlap(sol, this.groupe_bullets, this.player.annihilation);
+        this.physics.add.collider(mur, this.groupe_bullets, this.player.annihilation);
+        this.physics.add.collider(sol, this.groupe_bullets, this.player.annihilation);
 
         this.physics.add.collider(mur, this.groupe_ball_energie, this.player.annihilation);
 
