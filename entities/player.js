@@ -36,6 +36,9 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.is_not_atk = true;
 
         this.setOrigin(0.5, 1);
+        this.setSize(24, 50, true);
+        this.setOffset(20 ,14)
+        console.log(this)
     }
 
     blocage_touche () {
@@ -85,10 +88,15 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         if (this.wall_jump == true) {
             this.wall_jump = false;
             this.offTouche = true;
-            setTimeout(this.wall_jump = true, 500);
-            setTimeout(this.offTouche = false, 200);
-            this.setVelocityY(-p_deplacementY);
-            this.setVelocityX(-50);
+            this.scene.time.delayedCall(200, ()=>{
+                this.wall_jump = true
+            });
+            this.scene.time.delayedCall(200, ()=>{
+                this.offTouche = false
+            });
+
+            this.setVelocityY(-p_deplacementY - 100);
+            this.setVelocityX(-500);
                             
             }
         }
@@ -97,10 +105,16 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
             if (this.wall_jump == true) {
                 this.wall_jump = false;
                 this.offTouche = true;
-                setTimeout(this.wall_jump = true, 500);
-                setTimeout(this.offTouche = false, 200);
-                this.setVelocityY(-p_deplacementY);
-                this.setVelocityX(50);
+                this.scene.time.delayedCall(200, ()=>{
+                    this.wall_jump = true
+                });
+                this.scene.time.delayedCall(200, ()=>{
+                    this.offTouche = false
+                });
+                //setTimeout(this.wall_jump = true, 500);
+                //setTimeout(this.offTouche = false, 200);
+                this.setVelocityY(-p_deplacementY - 100);
+                this.setVelocityX(500);
                             
             }
         }

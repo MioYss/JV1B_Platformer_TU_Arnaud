@@ -80,7 +80,6 @@ export default class tuto_01 extends Phaser.Scene {
         
         //CREATION JOUEUR ET PROPRIETES
         this.player = new Player(this, 46,318, 'perso');
-        this.player.setSize(32, 64, true);
         //Initialisation de la caméra et des limites de jeu
         this.cameras.main.setBounds(0, 0, 2048, 3584);
         this.cameras.main.zoom = 1;
