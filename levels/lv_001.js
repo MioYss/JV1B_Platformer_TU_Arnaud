@@ -22,8 +22,8 @@ export default class lv_001 extends Phaser.Scene {
     // chargement de la carte
     this.load.tilemapTiledJSON("lv_001", "level/lv_001.json");
 
-    this.load.spritesheet('perso','assets/perso.png',
-        { frameWidth: 32, frameHeight: 48 });
+    this.load.spritesheet('perso','assets/perso_sheet.png',
+        { frameWidth: 64, frameHeight: 64 });
 
     this.load.image("snake", "assets/snake.png"); //Sprite mob
 
@@ -79,7 +79,7 @@ export default class lv_001 extends Phaser.Scene {
     
         
         //CREATION JOUEUR ET PROPRIETES
-        this.player = new Player(this, 48,918, 'perso');
+        this.player = new Player(this, 47,923, 'perso');
 
         //Initialisation de la caméra et des limites de jeu
         this.cameras.main.setBounds(0, 0, 2048, 3584);

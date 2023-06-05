@@ -34,6 +34,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         this.create_animation();
         this.is_not_atk = true;
+
+        this.setOrigin(0.5, 1);
     }
 
     blocage_touche () {
