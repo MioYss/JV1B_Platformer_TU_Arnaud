@@ -22,14 +22,14 @@ export default class tuto_01 extends Phaser.Scene {
     // chargement de la carte
     this.load.tilemapTiledJSON("tuto_01", "level/tuto_01.json");
 
-    this.load.spritesheet('perso','assets/perso.png',
-        { frameWidth: 32, frameHeight: 48 });
+    this.load.spritesheet('perso','assets/perso_sheet.png',
+        { frameWidth: 64, frameHeight: 64 });
 
     this.load.image("snake", "assets/snake.png"); //Sprite mob
 
     this.load.image("sprite_tir", "assets/projectile.png"); //Sprite tir
 
-    this.load.image("slash", "assets/slash.png");
+    this.load.image("slash", "assets/slash02.png");
 
     this.load.image("sprite_vortex", "assets/vortex.png"); 
 
@@ -79,8 +79,8 @@ export default class tuto_01 extends Phaser.Scene {
     
         
         //CREATION JOUEUR ET PROPRIETES
-        this.player = new Player(this, 47,309, 'perso');
-
+        this.player = new Player(this, 47,289, 'perso');
+        this.player.setSize(32, 64, true);
         //Initialisation de la caméra et des limites de jeu
         this.cameras.main.setBounds(0, 0, 2048, 3584);
         this.cameras.main.zoom = 1;

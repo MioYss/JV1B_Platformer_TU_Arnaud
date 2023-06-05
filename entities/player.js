@@ -31,6 +31,9 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.vortex_cooldown = 200
 
         this.swap = false
+
+        this.create_animation();
+        this.is_not_atk = true;
     }
 
     blocage_touche () {
@@ -44,24 +47,34 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     deplacement() {
         if(!this.body) return;
 
-        if (this.keyboard.left.isDown) { //si la touche gauche est appuyée
+        if (this.keyboard.left.isDown && this.is_not_atk) { //si la touche gauche est appuyée
             this.setVelocityX(-300); //alors vitesse négative en X
             window.dataPlayer.direction = "left"
+            this.setFlipX(true);
+            this.setVelocityX(-160);
+            this.anims.play('run', true);
 
         }
 
-        else if (this.keyboard.right.isDown) { //sinon si la touche droite est appuyée
+        else if (this.keyboard.right.isDown && this.is_not_atk) { //sinon si la touche droite est appuyée
             this.setVelocityX(300); //alors vitesse positive en X
             window.dataPlayer.direction = "right"
+            this.setFlipX(false);
+            this.setVelocityX(160);
+            this.anims.play('run', true);
         }
         
         else {
             this.setVelocityX(0)
+            if (this.body.onFloor() && this.is_not_atk) {
+                this.anims.play('idle', true);
+            }
         }
 
-        if (this.keyboard.up.isDown && this.body.blocked.down) { // si touche bas appuyée 
+        if (this.keyboard.up.isDown && this.body.blocked.down && this.is_not_atk) { // si touche bas appuyée 
             this.setVelocityY(-300); //vitesse 
             window.dataPlayer.direction = "up"
+            
         }
 
 
@@ -133,11 +146,21 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         } 
 
         else{
-           this.slash = new Slash (scene, this.x, this.y, sprite);
-           this.slash.tirer(window.dataPlayer.direction);
-           this.time_from_last_slash = new Date().getTime(); // on donne une nouvelle valeur a timefrom, on l'actualise pour avoir un delai
-
+            this.is_not_atk = false;
+            this.anims.play('attaque', true);
+            this.slash = new Slash (scene, this.x, this.y, sprite);
+            this.slash.tirer(window.dataPlayer.direction);
+            this.time_from_last_slash = new Date().getTime(); // on donne une nouvelle valeur a timefrom, on l'actualise pour avoir un delai
+            this.scene.time.delayedCall(330, ()=>{
+                this.is_not_atk = true
+            });
         } 
+
+    }
+
+    fin_attaque(){
+
+        this.is_not_atk = true
 
     }
 
@@ -193,6 +216,31 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         bullet.destroy();
         vortex.destroy();
+
+    }
+
+    create_animation() {
+
+        this.scene.anims.create({
+			key: 'idle',
+			frames: this.scene.anims.generateFrameNumbers('perso', { start: 24, end: 28 }),
+			frameRate: 5,
+			repeat: -1
+		}); 
+
+        this.scene.anims.create({
+			key: 'run',
+			frames: this.scene.anims.generateFrameNumbers('perso', { start: 9, end: 15 }),
+			frameRate: 12,
+			repeat: -1
+		}); 
+
+        this.scene.anims.create({
+			key: 'attaque',
+			frames: this.scene.anims.generateFrameNumbers('perso', { start: 15, end: 21 }),
+			frameRate: 30,
+			repeat: 0
+		}); 
 
     }
 }
