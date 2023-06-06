@@ -173,11 +173,11 @@ export default class tuto_02 extends Phaser.Scene {
             console.log (this)
         }
 
-        if (keyE.isDown) {
+        /*if (keyE.isDown) {
 
             console.log ("test E");
             this.player.attaque_vortex(this, this.sprite_vortex);
-        }
+        }*/
 
         if (keyR.isDown) {
             console.log ("test R");

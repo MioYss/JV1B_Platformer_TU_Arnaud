@@ -51,42 +51,6 @@
                 {
                  "class":"",
                  "height":0,
-                 "id":1,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "visible":true,
-                 "width":0,
-                 "x":330.667,
-                 "y":366.667
-                }, 
-                {
-                 "class":"",
-                 "height":0,
-                 "id":2,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "visible":true,
-                 "width":0,
-                 "x":493.333,
-                 "y":304
-                }, 
-                {
-                 "class":"",
-                 "height":0,
-                 "id":3,
-                 "name":"",
-                 "point":true,
-                 "rotation":0,
-                 "visible":true,
-                 "width":0,
-                 "x":689.333,
-                 "y":269.333
-                }, 
-                {
-                 "class":"",
-                 "height":0,
                  "id":4,
                  "name":"",
                  "point":true,
@@ -99,38 +63,73 @@
                 {
                  "class":"",
                  "height":0,
-                 "id":6,
+                 "id":13,
                  "name":"",
                  "point":true,
                  "rotation":0,
                  "visible":true,
                  "width":0,
-                 "x":652,
-                 "y":82.6667
+                 "x":399,
+                 "y":312
                 }, 
                 {
                  "class":"",
                  "height":0,
-                 "id":7,
+                 "id":14,
                  "name":"",
                  "point":true,
                  "rotation":0,
                  "visible":true,
                  "width":0,
-                 "x":1040,
-                 "y":146.667
+                 "x":623.333333333333,
+                 "y":90
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":10,
+         "name":"ennemis_lv_001_statique",
+         "objects":[
+                {
+                 "class":"",
+                 "height":0,
+                 "id":19,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":1456,
+                 "y":216
                 }, 
                 {
                  "class":"",
                  "height":0,
-                 "id":8,
+                 "id":20,
                  "name":"",
                  "point":true,
                  "rotation":0,
                  "visible":true,
                  "width":0,
-                 "x":1388,
-                 "y":918.667
+                 "x":1520,
+                 "y":344
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":21,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":1453,
+                 "y":468
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -261,8 +260,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":9,
- "nextobjectid":13,
+ "nextlayerid":11,
+ "nextobjectid":24,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",

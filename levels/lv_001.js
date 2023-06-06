@@ -127,6 +127,22 @@ export default class lv_001 extends Phaser.Scene {
             this.physics.add.collider(this.groupe_ennemis,sol);
             this.physics.add.collider(this.groupe_ennemis,mur);
         });
+
+        //Creation des ennemis à partir du layer objet dans Tiled
+             /*map.getObjectLayer('ennemis_lv_001_statique').objects.forEach((objet) => {
+            this.groupe_ennemis.add(new tobs_statique (this,objet.x, objet.y, "snake"));
+            
+            this.physics.add.collider(this.groupe_ennemis,sol);
+            this.physics.add.collider(this.groupe_ennemis,mur);
+        });
+        
+        //Creation des ennemis à partir du layer objet dans Tiled
+        map.getObjectLayer('ennemis_lv_001_twin').objects.forEach((objet) => {
+            this.groupe_ennemis.add(new Mobs_twin (this,objet.x, objet.y, "snake"));
+            
+            this.physics.add.collider(this.groupe_ennemis,sol);
+            this.physics.add.collider(this.groupe_ennemis,mur);
+        });*/
         
         console.log(this.groupe_ennemis.children)
 
@@ -172,11 +188,11 @@ export default class lv_001 extends Phaser.Scene {
             console.log (this)
         }
 
-        if (keyE.isDown) {
+        /*if (keyE.isDown) {
 
             console.log ("test E");
             this.player.attaque_vortex(this, this.sprite_vortex);
-        }
+        }*/
 
         if (keyR.isDown) {
             console.log ("test R");
