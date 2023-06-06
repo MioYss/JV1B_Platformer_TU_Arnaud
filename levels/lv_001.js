@@ -1,9 +1,11 @@
 import Player from "../entities/player.js";
 import Mobs from "../entities/mobs.js";
+import mobs_statique from "../entities/mobs_statique.js";
 
 var keyA;
 var keyE;
 var keyR;
+let tween_mouvement
 
 export default class lv_001 extends Phaser.Scene {
     constructor() {
@@ -112,6 +114,8 @@ export default class lv_001 extends Phaser.Scene {
         // Creation groupes
         this.groupe_ennemis = this.physics.add.group();
 
+        this.groupe_ennemis02 = this.physics.add.group();
+
         this.groupe_bullets = this.physics.add.group();
 
         this.slash = this.physics.add.group();
@@ -129,15 +133,38 @@ export default class lv_001 extends Phaser.Scene {
         });
 
         //Creation des ennemis à partir du layer objet dans Tiled
-             /*map.getObjectLayer('ennemis_lv_001_statique').objects.forEach((objet) => {
-            this.groupe_ennemis.add(new tobs_statique (this,objet.x, objet.y, "snake"));
+             map.getObjectLayer('ennemis_lv_001_statique').objects.forEach((objet) => {
+            this.groupe_ennemis02.add(new mobs_statique (this,objet.x, objet.y, "snake"));
+
+            this.groupe_ennemis02.children.each(function(child) {
             
+                child.setScale(0.6);
+    
+                child.body.allowGravity = false;
+                child.body.immovable = true; 
+    
+                child.hp = 3; 
+            
+                tween_mouvement = this.tweens.add({
+                    targets: [child],  // on applique le tween sur platefprme_mobile
+                    paused: false, // de base le tween est en pause
+                    ease: "Linear",  // concerne la vitesse de mouvement : linéaire ici 
+                    duration: 2000,  // durée de l'animation pour trajet
+                    yoyo: true,   // mode yoyo : une fois terminé on "rembobine" le déplacement 
+                    x: "-=300",   // on va déplacer la plateforme de 300 pixel vers le haut par rapport a sa position
+                    delay: 0,     // délai avant le début du tween une fois ce dernier activé
+                    hold: 1000,   // délai avant le yoyo
+                    repeatDelay: 1000, // delay 
+                    repeat: -1 // répétition infinie 
+                });
+    
+              }, this);
             this.physics.add.collider(this.groupe_ennemis,sol);
             this.physics.add.collider(this.groupe_ennemis,mur);
         });
         
         //Creation des ennemis à partir du layer objet dans Tiled
-        map.getObjectLayer('ennemis_lv_001_twin').objects.forEach((objet) => {
+        /*map.getObjectLayer('ennemis_lv_001_twin').objects.forEach((objet) => {
             this.groupe_ennemis.add(new Mobs_twin (this,objet.x, objet.y, "snake"));
             
             this.physics.add.collider(this.groupe_ennemis,sol);
