@@ -253,8 +253,7 @@ export default class tuto_01 extends Phaser.Scene {
         if (keyA.isDown) {
 
             console.log ("test A");
-            this.player.attaque_slash(this, this.slash);
-            console.log (this);
+            this.player.attaque_slash(this);
             this.sword_song.play();
         }
 
