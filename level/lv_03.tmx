@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="56" height="47" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="5">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="56" height="47" tilewidth="32" tileheight="32" infinite="0" nextlayerid="10" nextobjectid="47">
  <editorsettings>
   <export target="lv_03.json" format="json"/>
  </editorsettings>
@@ -77,6 +77,118 @@
  </layer>
  <objectgroup id="7" name="ennemis_lv_03">
   <object id="3" x="48.6667" y="241.333">
+   <point/>
+  </object>
+  <object id="5" x="428" y="500">
+   <point/>
+  </object>
+  <object id="6" x="46.6667" y="690.667">
+   <point/>
+  </object>
+  <object id="9" x="430.667" y="941.333">
+   <point/>
+  </object>
+  <object id="11" x="270.667" y="1300">
+   <point/>
+  </object>
+  <object id="17" x="1226.67" y="1332">
+   <point/>
+  </object>
+  <object id="18" x="561.333" y="848">
+   <point/>
+  </object>
+  <object id="21" x="1333.33" y="1265.33">
+   <point/>
+  </object>
+  <object id="22" x="1610.67" y="1072">
+   <point/>
+  </object>
+  <object id="24" x="1102.67" y="208">
+   <point/>
+  </object>
+  <object id="28" x="1026.67" y="528">
+   <point/>
+  </object>
+  <object id="32" x="784" y="208">
+   <point/>
+  </object>
+  <object id="45" x="511.333" y="622.667">
+   <point/>
+  </object>
+  <object id="46" x="1224" y="404.667">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="ennemis_lv_001_twin">
+  <object id="13" x="338.667" y="1456">
+   <point/>
+  </object>
+  <object id="14" x="493.333" y="1458.67">
+   <point/>
+  </object>
+  <object id="15" x="844" y="1458.67">
+   <point/>
+  </object>
+  <object id="16" x="1009.33" y="1453.33">
+   <point/>
+  </object>
+  <object id="20" x="1457.33" y="1460">
+   <point/>
+  </object>
+  <object id="23" x="1550.67" y="564">
+   <point/>
+  </object>
+  <object id="31" x="732" y="661.333">
+   <point/>
+  </object>
+  <object id="38" x="1420" y="884">
+   <point/>
+  </object>
+  <object id="39" x="1647" y="917">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="ennemis_lv_001_statique">
+  <object id="7" x="297.333" y="562.667">
+   <point/>
+  </object>
+  <object id="8" x="226.667" y="786.667">
+   <point/>
+  </object>
+  <object id="10" x="285.333" y="1012">
+   <point/>
+  </object>
+  <object id="12" x="50.6667" y="1137.33">
+   <point/>
+  </object>
+  <object id="19" x="752" y="850.667">
+   <point/>
+  </object>
+  <object id="25" x="958.667" y="181.333">
+   <point/>
+  </object>
+  <object id="26" x="1214.67" y="238.667">
+   <point/>
+  </object>
+  <object id="29" x="1068" y="628">
+   <point/>
+  </object>
+  <object id="30" x="898.667" y="590.667">
+   <point/>
+  </object>
+  <object id="35" x="644" y="1230.67">
+   <point/>
+  </object>
+  <object id="36" x="812" y="1202.67">
+   <point/>
+  </object>
+  <object id="37" x="564" y="1074.67">
+   <point/>
+  </object>
+  <object id="43" x="498" y="368.667">
+   <point/>
+  </object>
+  <object id="44" x="593.333" y="462">
    <point/>
   </object>
  </objectgroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="18" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="4">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="18" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="5">
  <editorsettings>
   <export target="tuto_02.json" format="json"/>
  </editorsettings>
@@ -99,6 +99,9 @@
  </layer>
  <objectgroup id="5" name="ennemis_tuto_02">
   <object id="1" x="500.612" y="467.633">
+   <point/>
+  </object>
+  <object id="4" x="595.323" y="243.541">
    <point/>
   </object>
  </objectgroup>

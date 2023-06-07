@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="40" height="43" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="4">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="40" height="43" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="22">
  <editorsettings>
-  <export format="json"/>
+  <export target="lv_02.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="tile_set_tuto" tilewidth="32" tileheight="32" tilecount="36" columns="6">
   <image source="../assets/tile_set_tuto.png" width="192" height="192"/>
@@ -312,7 +312,62 @@
 </data>
  </layer>
  <objectgroup id="8" name="ennemis_lv_02">
-  <object id="2" x="562" y="1173">
+  <object id="4" x="399" y="405">
+   <point/>
+  </object>
+  <object id="21" x="783" y="1012">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="ennemis_lv_001_statique">
+  <object id="8" x="1068" y="1204">
+   <point/>
+  </object>
+  <object id="9" x="855" y="1047">
+   <point/>
+  </object>
+  <object id="10" x="1100" y="916">
+   <point/>
+  </object>
+  <object id="11" x="1008" y="696">
+   <point/>
+  </object>
+  <object id="12" x="848" y="596">
+   <point/>
+  </object>
+  <object id="13" x="1103" y="468">
+   <point/>
+  </object>
+  <object id="14" x="1031" y="247">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="ennemis_lv_001_twin">
+  <object id="5" x="656" y="1174">
+   <point/>
+  </object>
+  <object id="6" x="495" y="1335">
+   <point/>
+  </object>
+  <object id="7" x="944" y="1332">
+   <point/>
+  </object>
+  <object id="15" x="779" y="85">
+   <point/>
+  </object>
+  <object id="16" x="654" y="405">
+   <point/>
+  </object>
+  <object id="17" x="526" y="758">
+   <point/>
+  </object>
+  <object id="18" x="175" y="821">
+   <point/>
+  </object>
+  <object id="19" x="242" y="1014">
+   <point/>
+  </object>
+  <object id="20" x="561" y="1013">
    <point/>
   </object>
  </objectgroup>

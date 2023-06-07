@@ -47,42 +47,77 @@
          "draworder":"topdown",
          "id":3,
          "name":"ennemis_lv_001",
+         "objects":[],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":11,
+         "name":"ennemis_lv_001_twin",
          "objects":[
                 {
                  "class":"",
                  "height":0,
-                 "id":4,
+                 "id":24,
                  "name":"",
                  "point":true,
                  "rotation":0,
                  "visible":true,
                  "width":0,
-                 "x":882.667,
-                 "y":621.333
+                 "x":1044,
+                 "y":140
                 }, 
                 {
                  "class":"",
                  "height":0,
-                 "id":13,
+                 "id":25,
                  "name":"",
                  "point":true,
                  "rotation":0,
                  "visible":true,
                  "width":0,
-                 "x":399,
-                 "y":312
+                 "x":842,
+                 "y":916
                 }, 
                 {
                  "class":"",
                  "height":0,
-                 "id":14,
+                 "id":26,
                  "name":"",
                  "point":true,
                  "rotation":0,
                  "visible":true,
                  "width":0,
-                 "x":623.333333333333,
-                 "y":90
+                 "x":1220,
+                 "y":916
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":29,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":236,
+                 "y":628
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":30,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":302,
+                 "y":85
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -130,6 +165,30 @@
                  "width":0,
                  "x":1453,
                  "y":468
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":27,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":689.333333333333,
+                 "y":759.333333333333
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":28,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":847.333333333333,
+                 "y":664.666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -260,8 +319,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":11,
- "nextobjectid":24,
+ "nextlayerid":12,
+ "nextobjectid":32,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",

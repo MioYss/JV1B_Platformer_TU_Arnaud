@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="50" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="24">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="50" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="12" nextobjectid="32">
  <editorsettings>
   <export target="lv_001.json" format="json"/>
  </editorsettings>
@@ -63,14 +63,21 @@
 133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,133
 </data>
  </layer>
- <objectgroup id="3" name="ennemis_lv_001">
-  <object id="4" x="882.667" y="621.333">
+ <objectgroup id="3" name="ennemis_lv_001"/>
+ <objectgroup id="11" name="ennemis_lv_001_twin">
+  <object id="24" x="1044" y="140">
    <point/>
   </object>
-  <object id="13" x="399" y="312">
+  <object id="25" x="842" y="916">
    <point/>
   </object>
-  <object id="14" x="623.333" y="90">
+  <object id="26" x="1220" y="916">
+   <point/>
+  </object>
+  <object id="29" x="236" y="628">
+   <point/>
+  </object>
+  <object id="30" x="302" y="85">
    <point/>
   </object>
  </objectgroup>
@@ -82,6 +89,12 @@
    <point/>
   </object>
   <object id="21" x="1453" y="468">
+   <point/>
+  </object>
+  <object id="27" x="689.333" y="759.333">
+   <point/>
+  </object>
+  <object id="28" x="847.333" y="664.667">
    <point/>
   </object>
  </objectgroup>

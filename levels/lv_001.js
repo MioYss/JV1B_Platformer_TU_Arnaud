@@ -1,6 +1,8 @@
 import Player from "../entities/player.js";
 import Mobs from "../entities/mobs.js";
+import mobs_twin from "../entities/mobs_twin.js";
 import mobs_statique from "../entities/mobs_statique.js";
+
 
 var keyA;
 var keyE;
@@ -111,7 +113,7 @@ export default class lv_001 extends Phaser.Scene {
         this.physics.add.collider(this.player, fin_lv_001, () => {
         
             console.log ("test")
-            this.scene.start("lv_02", {
+            this.scene.start("tuto_02", {
                 x : 1920,
                 y : 3500,
             });
@@ -122,6 +124,8 @@ export default class lv_001 extends Phaser.Scene {
         this.groupe_ennemis = this.physics.add.group();
 
         this.groupe_ennemis02 = this.physics.add.group();
+
+        this.groupe_ennemis03 = this.physics.add.group();
 
         this.groupe_bullets = this.physics.add.group();
 
@@ -140,25 +144,24 @@ export default class lv_001 extends Phaser.Scene {
         });
 
         //Creation des ennemis à partir du layer objet dans Tiled
-             map.getObjectLayer('ennemis_lv_001_statique').objects.forEach((objet) => {
-            this.groupe_ennemis02.add(new mobs_statique (this,objet.x, objet.y, "snake"));
+             map.getObjectLayer('ennemis_lv_001_twin').objects.forEach((objet) => {
+            this.groupe_ennemis02.add(new mobs_twin (this,objet.x, objet.y, "snake"));
 
             this.groupe_ennemis02.children.each(function(child) {
             
-                child.setScale(0.6);
+                child.setScale(1);
     
-                child.body.allowGravity = false;
                 child.body.immovable = true; 
     
                 child.hp = 3; 
             
                 tween_mouvement = this.tweens.add({
-                    targets: [child],  // on applique le tween sur platefprme_mobile
+                    targets: [child],  // on applique le tween sur
                     paused: false, // de base le tween est en pause
                     ease: "Linear",  // concerne la vitesse de mouvement : linéaire ici 
-                    duration: 2000,  // durée de l'animation pour trajet
+                    duration: 1000,  // durée de l'animation pour trajet
                     yoyo: true,   // mode yoyo : une fois terminé on "rembobine" le déplacement 
-                    x: "-=300",   // on va déplacer la plateforme de 300 pixel vers le haut par rapport a sa position
+                    x: "-=100",   // on va déplacer la plateforme de 300 pixel vers le haut par rapport a sa position
                     delay: 0,     // délai avant le début du tween une fois ce dernier activé
                     hold: 1000,   // délai avant le yoyo
                     repeatDelay: 1000, // delay 
@@ -166,17 +169,17 @@ export default class lv_001 extends Phaser.Scene {
                 });
     
               }, this);
-            this.physics.add.collider(this.groupe_ennemis,sol);
-            this.physics.add.collider(this.groupe_ennemis,mur);
+            this.physics.add.collider(this.groupe_ennemis02,sol);
+            this.physics.add.collider(this.groupe_ennemis02,mur);
         });
         
         //Creation des ennemis à partir du layer objet dans Tiled
-        /*map.getObjectLayer('ennemis_lv_001_twin').objects.forEach((objet) => {
-            this.groupe_ennemis.add(new Mobs_twin (this,objet.x, objet.y, "snake"));
+        map.getObjectLayer('ennemis_lv_001_statique').objects.forEach((objet) => {
+            this.groupe_ennemis03.add(new mobs_statique (this,objet.x, objet.y, "snake"));
             
-            this.physics.add.collider(this.groupe_ennemis,sol);
-            this.physics.add.collider(this.groupe_ennemis,mur);
-        });*/
+            this.physics.add.collider(this.groupe_ennemis03,sol);
+            this.physics.add.collider(this.groupe_ennemis03,mur);
+        });
         
         console.log(this.groupe_ennemis.children)
 
@@ -207,6 +210,18 @@ export default class lv_001 extends Phaser.Scene {
         this.physics.add.collider(this.groupe_vortex, this.groupe_bullets, (groupe_vortex, bullet) => {
             this.player.absorption_vortex(bullet ,groupe_vortex);
         });
+
+        //ennemies twin
+
+        this.physics.add.collider(this.player, this.groupe_ennemis02, this.player.recoit_degats);
+
+        this.physics.add.collider(this.groupe_ennemis02, this.slash, this.player.slash_mobs);
+
+        //ennemies statique
+        
+        this.physics.add.collider(this.player, this.groupe_ennemis03, this.player.recoit_degats);
+
+        this.physics.add.collider(this.groupe_ennemis03, this.slash, this.player.slash_mobs);
     }
 
 

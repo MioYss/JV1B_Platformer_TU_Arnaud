@@ -13,11 +13,16 @@
             "scaleInEditor": 1
         },
         "lv_001.tmx": {
-            "scale": 0.5,
-            "selectedLayer": 2,
+            "expandedObjectLayers": [
+                10,
+                3,
+                11
+            ],
+            "scale": 1,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 989,
-                "y": 746
+                "x": 695.5,
+                "y": 539
             }
         },
         "lv_001.tmx#tile_set_lab": {
@@ -28,11 +33,11 @@
             "scaleInDock": 1
         },
         "lv_02.tmx": {
-            "scale": 0.75,
-            "selectedLayer": 3,
+            "scale": 1,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 538,
-                "y": 878.6666666666666
+                "x": 539.5,
+                "y": 1109
             }
         },
         "lv_02.tmx#tile_set_lab": {
@@ -84,8 +89,8 @@
             "scale": 1.1825520833333334,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 422.39154371283854,
-                "y": 323.8757982823167
+                "x": 928.923144681788,
+                "y": 324.72142699845847
             }
         },
         "tuto_02.tmx#tile_set_lab": {
