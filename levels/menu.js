@@ -21,7 +21,7 @@ export default class menu extends Phaser.Scene {
     update() {
         //LANCE PREMIERE SCENE QUAND ESPACE APPUYE
         if(Phaser.Input.Keyboard.JustDown(this.cursors.space)){
-            this.scene.start("tuto_01", {
+            this.scene.start("tuto_02", {
                 x : 1200, 
                 y : 1300,
             });

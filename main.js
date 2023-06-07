@@ -19,7 +19,7 @@ var config = {
         default: 'arcade',
         arcade: {
             gravity: { y: GRAVITY_GAME },
-            debug: true,
+            debug: false,
         }
     },
     pixelArt: true,

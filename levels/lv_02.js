@@ -33,10 +33,10 @@ export default class lv_02 extends Phaser.Scene {
 
     this.load.spritesheet('snake02','assets/mob_sheet02.png',
         { frameWidth: 64, frameHeight: 64 });
-        
+
     this.load.image("sprite_tir", "assets/projectile.png"); //Sprite tir
 
-    this.load.image("slash", "assets/slash.png");
+    this.load.image("slash", "assets/slash02.png");
 
     this.load.image("sprite_vortex", "assets/vortex.png"); 
 
@@ -252,7 +252,7 @@ export default class lv_02 extends Phaser.Scene {
         if (keyA.isDown) {
 
             console.log ("test A");
-            this.player.attaque_slash(this, this.slash);
+            this.player.attaque_slash(this);
             console.log (this);
             this.sword_song.play();
         }

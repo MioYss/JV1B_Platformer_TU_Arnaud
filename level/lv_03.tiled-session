@@ -18,11 +18,11 @@
                 3,
                 11
             ],
-            "scale": 1,
+            "scale": 0.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 695.5,
-                "y": 539
+                "x": 973,
+                "y": 542
             }
         },
         "lv_001.tmx#tile_set_lab": {
@@ -54,13 +54,15 @@
         },
         "lv_03.tmx": {
             "expandedObjectLayers": [
+                9,
+                8,
                 7
             ],
-            "scale": 1.5,
+            "scale": 0.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1216.3333333333333,
-                "y": 326
+                "x": 883,
+                "y": 748
             }
         },
         "lv_03.tmx#tile_set_lab": {
@@ -93,11 +95,11 @@
             "expandedObjectLayers": [
                 5
             ],
-            "scale": 1.1825520833333334,
+            "scale": 0.75,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 520.4844747852895,
-                "y": 323.0301695661748
+                "x": 547.3333333333333,
+                "y": 197.33333333333337
             }
         },
         "tuto_02.tmx#tile_set_lab": {
