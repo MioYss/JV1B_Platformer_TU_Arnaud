@@ -31,7 +31,7 @@ export default class Slash extends Phaser.Physics.Arcade.Sprite {
                 else if (direction == 'down') { coefDirY = -1; coefDirX = 0}
 
             // on crée la balle a coté du joueur
-            var sprite_slash = this.scene.slash.create(this.x + (25 * coefDirX), this.y -4, 'slash');
+            var sprite_slash = this.scene.slash.create(this.x + (40 * coefDirX), this.y -20, 'slash');
 
             // parametres physiques de la balle.
 
