@@ -5,7 +5,7 @@ import tuto_02 from "../levels/tuto_02.js";
 import lv_001 from "../levels/lv_001.js";
 import lv_02 from "../levels/lv_02.js";
 import lv_03 from "../levels/lv_03.js";
-
+import fin from "../levels/fin.js";
 
 var config = {
     type: Phaser.AUTO,
@@ -24,6 +24,6 @@ var config = {
     },
     pixelArt: true,
 
-    scene: [menu,lv_01,tuto_01,lv_001,lv_02,lv_03,tuto_02]
+    scene: [menu,lv_01,tuto_01,lv_001,lv_02,lv_03,tuto_02,fin]
 };
 var game = new Phaser.Game(config);

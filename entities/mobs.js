@@ -14,6 +14,10 @@ export default class Mobs extends Phaser.Physics.Arcade.Sprite {
         this.fire_cooldown = 1000; 
 
         this.hp = 1
+
+        this.setOrigin(1, 1);
+        this.setSize(24, 50, true);
+        this.setOffset(20 ,14)
         
     }
 

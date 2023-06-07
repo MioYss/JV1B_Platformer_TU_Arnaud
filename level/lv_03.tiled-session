@@ -33,11 +33,16 @@
             "scaleInDock": 1
         },
         "lv_02.tmx": {
+            "expandedObjectLayers": [
+                10,
+                9,
+                8
+            ],
             "scale": 1,
-            "selectedLayer": 6,
+            "selectedLayer": 8,
             "viewCenter": {
-                "x": 539.5,
-                "y": 1109
+                "x": 538.5,
+                "y": 1108
             }
         },
         "lv_02.tmx#tile_set_lab": {
@@ -51,11 +56,11 @@
             "expandedObjectLayers": [
                 7
             ],
-            "scale": 0.75,
-            "selectedLayer": 0,
+            "scale": 1.5,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 896,
-                "y": 751.3333333333333
+                "x": 1216.3333333333333,
+                "y": 326
             }
         },
         "lv_03.tmx#tile_set_lab": {
@@ -69,7 +74,7 @@
                 3
             ],
             "scale": 1.14890625,
-            "selectedLayer": 0,
+            "selectedLayer": 4,
             "viewCenter": {
                 "x": 693.2680538555692,
                 "y": 185.3937168502652

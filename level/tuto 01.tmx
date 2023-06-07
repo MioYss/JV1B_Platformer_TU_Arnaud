@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="13" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="3">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="13" tilewidth="32" tileheight="32" infinite="0" nextlayerid="10" nextobjectid="5">
  <editorsettings>
-  <export target="tuto 01.json" format="json"/>
+  <export target="tuto_01.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="tile_set_tuto" tilewidth="32" tileheight="32" tilecount="36" columns="6">
   <image source="../assets/tile_set_tuto.png" width="192" height="192"/>
@@ -80,11 +80,14 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="3" name="ennemis_tuto">
-  <object id="1" x="623.252" y="307.42">
+ <objectgroup id="3" name="ennemis_tuto"/>
+ <objectgroup id="8" name="ennemis_lv_001_statique">
+  <object id="3" x="528.329" y="295.934">
    <point/>
   </object>
-  <object id="2" x="782.076" y="243.439">
+ </objectgroup>
+ <objectgroup id="9" name="ennemis_lv_001_twin">
+  <object id="4" x="773.779" y="231.525">
    <point/>
   </object>
  </objectgroup>
