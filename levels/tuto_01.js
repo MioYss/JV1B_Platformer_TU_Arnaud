@@ -31,6 +31,9 @@ export default class tuto_01 extends Phaser.Scene {
     this.load.spritesheet('snake','assets/mob_sheet-Sheet.png',
     { frameWidth: 64, frameHeight: 64 });
 
+    /*this.load.spritesheet('snake02','assets/mob_sheet02.png',
+    { frameWidth: 64, frameHeight: 64 });*/
+
     //this.load.image("snake", "assets/snake.png"); //Sprite mob
 
     this.load.image("sprite_tir", "assets/projectile.png"); //Sprite tir

@@ -98,10 +98,10 @@
 </data>
  </layer>
  <objectgroup id="5" name="ennemis_tuto_02">
-  <object id="1" x="500.612" y="467.633">
+  <object id="1" x="499.766" y="456.64">
    <point/>
   </object>
-  <object id="4" x="595.323" y="243.541">
+  <object id="4" x="636.758" y="208.025">
    <point/>
   </object>
  </objectgroup>

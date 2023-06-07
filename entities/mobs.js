@@ -11,13 +11,13 @@ export default class Mobs extends Phaser.Physics.Arcade.Sprite {
         this.setCollideWorldBounds(true);
 
         this.time_from_last_shot = 0; 
-        this.fire_cooldown = 1000; 
+        this.fire_cooldown = 1500; 
 
         this.hp = 1
 
-        this.setOrigin(1, 1);
-        this.setSize(24, 50, true);
-        this.setOffset(20 ,14)
+        //this.setOrigin(0.5, 2);
+        this.setSize(30, 55, true);
+        this.setOffset(0.5 ,10)
         
     }
 
@@ -51,4 +51,5 @@ export default class Mobs extends Phaser.Physics.Arcade.Sprite {
             this.time_from_last_shot = new Date().getTime(); // on donne une nouvelle valauer a timefrom, on l'actualise pour avoir un delai
         }
     }
+
 }

@@ -29,7 +29,8 @@ export default class lv_001 extends Phaser.Scene {
     this.load.spritesheet('perso','assets/perso_sheet.png',
         { frameWidth: 64, frameHeight: 64 });
 
-    this.load.image("snake", "assets/snake.png"); //Sprite mob
+    this.load.spritesheet('snake','assets/mob_sheet-Sheet.png',
+        { frameWidth: 64, frameHeight: 64 });
 
     this.load.image("sprite_tir", "assets/projectile.png"); //Sprite tir
 

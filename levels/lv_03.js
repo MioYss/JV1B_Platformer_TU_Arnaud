@@ -29,7 +29,14 @@ export default class lv_03 extends Phaser.Scene {
     this.load.spritesheet('perso','assets/perso_sheet.png',
         { frameWidth: 64, frameHeight: 64 });
 
-    this.load.image("snake", "assets/snake.png"); //Sprite mob
+    this.load.spritesheet('snake','assets/mob_sheet-Sheet.png',
+        { frameWidth: 32, frameHeight: 64 });
+
+    this.load.spritesheet('snake02','assets/mob_sheet02.png',
+        { frameWidth: 64, frameHeight: 64 });
+        
+
+    //this.load.image("snake", "assets/snake.png"); //Sprite mob
 
     this.load.image("sprite_tir", "assets/projectile.png"); //Sprite tir
 
@@ -147,7 +154,7 @@ export default class lv_03 extends Phaser.Scene {
 
         //Creation des ennemis à partir du layer objet dans Tiled
         map.getObjectLayer('ennemis_lv_03').objects.forEach((objet) => {
-            this.groupe_ennemis.add(new Mobs (this,objet.x, objet.y, "snake"));
+            this.groupe_ennemis.add(new Mobs (this,objet.x, objet.y, "snake02"));
             
             this.physics.add.collider(this.groupe_ennemis,sol);
             this.physics.add.collider(this.groupe_ennemis,mur);

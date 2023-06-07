@@ -15,7 +15,7 @@ export default class mobs_statique extends Phaser.Physics.Arcade.Sprite {
 
         this.hp = 1
         
-        this.setOrigin(0, 0.5);
+        this.setOrigin(0, 2);
         this.setSize(30, 55, true);
         this.setOffset(0.5 ,10)
     }

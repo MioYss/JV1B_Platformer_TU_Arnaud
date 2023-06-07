@@ -15,7 +15,7 @@ export default class Mobs_twin extends Phaser.Physics.Arcade.Sprite {
 
         this.hp = 1
 
-        this.setOrigin(0.5, 1);
+        this.setOrigin(0.5, 2);
         this.setSize(30, 55, true);
         this.setOffset(0.5 ,10)
         

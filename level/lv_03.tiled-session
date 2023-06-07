@@ -38,11 +38,11 @@
                 9,
                 8
             ],
-            "scale": 1,
+            "scale": 0.5,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": 538.5,
-                "y": 1108
+                "x": 739,
+                "y": 774
             }
         },
         "lv_02.tmx#tile_set_lab": {
@@ -71,13 +71,15 @@
         },
         "tuto 01.tmx": {
             "expandedObjectLayers": [
+                9,
+                8,
                 3
             ],
             "scale": 1.14890625,
-            "selectedLayer": 4,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 693.2680538555692,
-                "y": 185.3937168502652
+                "x": 692.3976608187133,
+                "y": 186.2641098871209
             }
         },
         "tuto 01.tmx#tile_set_lab": {
@@ -94,8 +96,8 @@
             "scale": 1.1825520833333334,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 928.923144681788,
-                "y": 324.72142699845847
+                "x": 520.4844747852895,
+                "y": 323.0301695661748
             }
         },
         "tuto_02.tmx#tile_set_lab": {
@@ -117,11 +119,11 @@
     "project": "lv_03.tiled-project",
     "property.type": "bool",
     "recentFiles": [
+        "lv_02.tmx",
         "lv_03.tmx",
         "lv_001.tmx",
         "tuto_02.tmx",
-        "tuto 01.tmx",
-        "lv_02.tmx"
+        "tuto 01.tmx"
     ],
     "resizeMap.removeObjects": true,
     "tileset.embedInMap": true
