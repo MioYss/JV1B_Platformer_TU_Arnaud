@@ -35,6 +35,10 @@ export default class tuto_01 extends Phaser.Scene {
 
     this.load.image("sprite_ball", "assets/ball_energie.png"); 
 
+    this.load.audio("music", ["son/sci-fi_chronicles_12.mp3"])
+
+    this.load.audio("sword_song", ["son/sword.mp3"])
+
     }
 
     
@@ -46,6 +50,24 @@ export default class tuto_01 extends Phaser.Scene {
         keyE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E);
         keyR = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
         //this.scene.start('salle_01', { hp: 3 })
+
+        //creation des sons
+
+        this.sword_song = this.sound.add("sword_song");
+
+        this.music = this.sound.add("music");
+        var musicConfig = {
+
+            mute: false,
+            volume : 1,
+            rate : 1,
+            detune : 0,
+            seek : 0,
+            loop : true,
+            delay : 0,
+
+        }
+        this.music.play(musicConfig);
 
         // chargement de la carte
         const map = this.add.tilemap("tuto_01");
@@ -168,7 +190,8 @@ export default class tuto_01 extends Phaser.Scene {
 
             console.log ("test A");
             this.player.attaque_slash(this, this.slash);
-            console.log (this)
+            console.log (this);
+            this.sword_song.play();
         }
 
         /*if (keyE.isDown) {
