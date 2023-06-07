@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "lv_03.tmx",
+    "activeFile": "lv_001.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -14,7 +14,7 @@
         },
         "lv_001.tmx": {
             "scale": 0.5,
-            "selectedLayer": 0,
+            "selectedLayer": 2,
             "viewCenter": {
                 "x": 989,
                 "y": 746
@@ -101,16 +101,17 @@
     "map.lastUsedExportFilter": "Tous les Fichiers (*)",
     "map.lastUsedFormat": "tmx",
     "openFiles": [
-        "lv_03.tmx"
+        "lv_03.tmx",
+        "lv_001.tmx"
     ],
     "project": "lv_03.tiled-project",
     "property.type": "bool",
     "recentFiles": [
+        "lv_03.tmx",
+        "lv_001.tmx",
         "tuto_02.tmx",
         "tuto 01.tmx",
-        "lv_02.tmx",
-        "lv_001.tmx",
-        "lv_03.tmx"
+        "lv_02.tmx"
     ],
     "resizeMap.removeObjects": true,
     "tileset.embedInMap": true
